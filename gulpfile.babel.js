@@ -12,7 +12,7 @@ const reload = sync.reload;
 const config = {
     paths: {
         src: {
-            html: './src/**/*.php',
+            html: './src/**/*.html',
             img: './src/img/**.*',
             sass: ['src/sass/style.scss'],
             js: [
@@ -83,6 +83,6 @@ gulp.task('default', gulp.series(['build']));
 gulp.task('watch', gulp.series(['default'], function watch() {
     gulp.watch('src/sass/style.scss', gulp.series(['sass']));
     gulp.watch('src/js/**/*.js', gulp.series(['js']));
-    gulp.watch('src/*.php', gulp.series(['static']));
+    gulp.watch('src/*.html', gulp.series(['static']));
     return server();
 }));
