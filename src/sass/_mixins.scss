@@ -1,0 +1,26 @@
+@mixin flex($justifyContent: center, $alignItems: center, $direction: row) {
+  display: flex;
+  justify-content: $justifyContent;
+  align-items: $alignItems;
+  flex-direction: $direction;
+}
+
+@mixin pseudo($display: block, $pos: absolute, $content: '') {
+  content: $content;
+  display: $display;
+  position: $pos;
+}
+
+@mixin mq($arg...) {
+  @if length($arg)==1 {
+    @media screen and (max-width: nth($arg, 1)) {
+      @content;
+    }
+  }
+
+  @else if length($arg)==2 {
+    @media screen and (max-width: nth($arg, 1)) and (min-width: nth($arg, 2)) {
+      @content;
+    }
+  }
+}
