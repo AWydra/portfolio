@@ -3,16 +3,6 @@
   font-family: Montserrat, sans-serif;
 }
 
-.navigation {
-  position: fixed;
-  width: $navWidth;
-  height: 100vh;
-  left: 0;
-  top: 0;
-  background-color: $mainColor;
-  color: $fontColor;
-}
-
 .container {
   margin-left: $navWidth;
 }
