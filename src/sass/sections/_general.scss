@@ -3,12 +3,50 @@
   font-family: Montserrat, sans-serif;
 }
 
+hr {
+  height: 1px;
+  border: none;
+  border-top: solid $secondaryColor 2px;
+}
+
 .container {
   margin-left: $navWidth;
 }
 
 main {
   >section {
-    padding: 40px;
+    padding: 100px 150px;
+  }
+
+  .title {
+    width: 100%;
+    height: 80px;
+    margin-bottom: 80px;
+    @include flex(flex-start);
+
+    &::before {
+      @include pseudo();
+      background-color: $secondaryColor;
+      width: 5px;
+      height: 100%;
+    }
+
+    &__holder {
+      height: 100%;
+      margin-left: 20px;
+      @include flex(space-between, flex-start, column);
+
+      &--heading {
+        margin: 0;
+        line-height: .75;
+        font-size: $sectionTitle;
+        text-transform: uppercase;
+      }
+
+      &--subtitle {
+        margin: 0;
+        font-size: 1.2rem;
+      }
+    }
   }
 }
