@@ -18,6 +18,7 @@
 
   &__name {
     font-size: 3rem;
+    text-align: center;
     text-transform: uppercase;
     font-weight: 500;
     margin: 20px 0 0;
@@ -29,6 +30,7 @@
   }
 
   &__subtitle {
+    text-align: center;
     font-size: 1.5rem;
     color: $fontColor;
     margin-top: 10px;

@@ -53,7 +53,7 @@
             transition: all .1s ease-in-out;
 
             &:after {
-              @include pseudo(block, static);
+              @include pseudo();
               width: 0px;
               transition: all .3s ease;
               height: 5px;
