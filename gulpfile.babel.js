@@ -13,7 +13,7 @@ const config = {
     paths: {
         src: {
             html: './src/**/*.html',
-            img: './src/img/**.*',
+            img: './src/img/**/*.*',
             sass: ['src/sass/style.scss'],
             js: [
                 'src/js/main.js',
