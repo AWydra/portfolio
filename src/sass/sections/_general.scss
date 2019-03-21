@@ -9,6 +9,27 @@ hr {
   border-top: solid $secondaryColor 2px;
 }
 
+.icon {
+  width: $iconSize;
+  height: $iconSize;
+  fill: white;
+
+  &--theme {
+    fill: $secondaryColor;
+  }
+
+  &--contact {
+    width: 30px;
+    height: 30px;
+  }
+
+  &--users {
+    width: 35px;
+    stroke: $secondaryColor;
+    stroke-width: 2px;
+  }
+}
+
 .container {
   margin-left: $navWidth;
 }

@@ -1,0 +1,67 @@
+.contact {
+  &__container {
+    @include flex(space-between);
+  }
+
+  &__info {
+    width: 35%;
+    height: 420px;
+    border: solid black 1px;
+    padding: $contactPadding;
+    @include flex(space-between, center, column);
+
+    &-item {
+      width: 100%;
+      background-color: $contactBg;
+      border: #ddd solid 1px;
+      padding: 20px 15px 20px 65px;
+      position: relative;
+      margin-bottom: 15px;
+      @include flex(center, flex-start, column);
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+
+      >.icon {
+        position: absolute;
+        left: 15px;
+        top: 20px;
+      }
+
+      h6 {
+        font-weight: 600;
+        font-size: 1.2rem;
+        margin: 0 0 10px;
+      }
+
+      a {
+        padding: 7px 0 0;
+        color: #888;
+        font-size: 1.1rem;
+        letter-spacing: .1px;
+        text-decoration: none;
+      }
+    }
+  }
+
+  &__form {
+    width: 65%;
+    height: 420px;
+    margin: $contactPadding;
+    padding: 10px 30px;
+    background-color: $contactBg;
+    border: solid black 1px;
+
+    h4 {
+      width: 100%;
+      margin-bottom: 10px;
+      font-size: 1.2rem;
+    }
+
+    form {
+      height: calc(100% - 22px);
+      @include flex(space-between, flex-start);
+    }
+  }
+}
