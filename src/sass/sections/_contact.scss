@@ -102,6 +102,7 @@
       height: 100%;
       padding: 20px;
       border: $contactBorder;
+      resize: none;
 
       +.contact__underscore {
         top: #{-10px + $underscoreHeight};
