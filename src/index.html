@@ -248,9 +248,9 @@
                                     <use xlink:href="img/svg/icons.svg#icon-users"></use>
                                 </svg>
                                 <h6>Social media</h6>
-                                <a href="//facebook.com/wydramord">facebook.com/wydramord</a>
                                 <a href="//linkedin.com/in/AWydra">linkedin.com/in/AWydra</a>
                                 <a href="//github.com/AWydra">github.com/AWydra</a>
+                                <a href="//fb.me/wydramord">fb.me/wydramord</a>
                             </article>
                         </div>
                         <article class="contact__form">
@@ -258,12 +258,18 @@
                             <form action="mail.php">
                                 <div class="contact__input-container">
                                     <input type="text" name="name" placeholder="Imię">
+                                    <div class="contact__underscore"></div>
                                 </div>
                                 <div class="contact__input-container">
                                     <input type="email" name="email" placeholder="Email">
+                                    <div class="contact__underscore"></div>
                                 </div>
-                                <textarea name="message" placeholder="Treść wiadomości"></textarea>
-                                <button class="btn btn--theme" type="submit" name="send">Wyślij wiadomość</button>
+                                <div class="contact__textarea-container">
+                                    <textarea name="message" placeholder="Treść wiadomości"></textarea>
+                                    <div class="contact__underscore"></div>
+                                </div>
+                                <button class="btn btn--theme btn--medium" type="submit" name="send">Wyślij
+                                    wiadomość</button>
                             </form>
                         </article>
                     </section>

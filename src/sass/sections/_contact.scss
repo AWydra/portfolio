@@ -6,14 +6,13 @@
   &__info {
     width: 35%;
     height: 420px;
-    border: solid black 1px;
     padding: $contactPadding;
     @include flex(space-between, center, column);
 
     &-item {
       width: 100%;
       background-color: $contactBg;
-      border: #ddd solid 1px;
+      border: $contactBorder;
       padding: 20px 15px 20px 65px;
       position: relative;
       margin-bottom: 15px;
@@ -49,19 +48,81 @@
     width: 65%;
     height: 420px;
     margin: $contactPadding;
-    padding: 10px 30px;
+    padding: 30px;
     background-color: $contactBg;
-    border: solid black 1px;
+    border: $contactBorder;
 
     h4 {
       width: 100%;
-      margin-bottom: 10px;
+      margin: 0 0 20px;
       font-size: 1.2rem;
     }
 
     form {
-      height: calc(100% - 22px);
+      height: calc(100% - 42px);
       @include flex(space-between, flex-start);
+      flex-wrap: wrap;
     }
+  }
+
+  &__input-container {
+    width: 50%;
+
+    &:first-child {
+      padding-right: 20px;
+    }
+
+    &:last-child {
+      padding-left: 20px;
+    }
+
+    input {
+      width: 100%;
+      height: 50px;
+      padding: 0 20px;
+      border: $contactBorder;
+
+      &:focus {
+        outline: none;
+
+        +.contact__underscore {
+          width: 100%;
+        }
+      }
+    }
+  }
+
+  &__textarea-container {
+    width: 100%;
+    height: 60%;
+    margin: 15px 0;
+
+    textarea {
+      width: 100%;
+      height: 100%;
+      padding: 20px;
+      border: $contactBorder;
+
+      +.contact__underscore {
+        top: #{-10px + $underscoreHeight};
+      }
+
+      &:focus {
+        outline: none;
+
+        +.contact__underscore {
+          width: 100%;
+        }
+      }
+    }
+  }
+
+  &__underscore {
+    width: 0%;
+    height: $underscoreHeight;
+    background-color: $secondaryColor;
+    position: relative;
+    top: #{0px - $underscoreHeight};
+    transition: all .3s ease-in-out;
   }
 }

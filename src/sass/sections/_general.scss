@@ -40,7 +40,7 @@ main {
   >section {
     width: 100%;
     max-width: 1700px;
-    padding: 100px 150px;
+    padding: 100px 7%;
   }
 
   .title {
@@ -96,6 +96,12 @@ main {
     &--theme {
       color: white;
       background-color: $secondaryColor;
+    }
+
+    &--medium {
+      height: 44px;
+      padding: 0 20px;
+      font-size: 14px;
     }
   }
 }
