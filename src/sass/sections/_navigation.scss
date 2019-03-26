@@ -6,6 +6,7 @@
   top: 0;
   background-color: $mainColor;
   color: $fontColor;
+  overflow-y: overlay;
 
   &__logo-container {
     height: $logoHeight;
@@ -61,8 +62,10 @@
               background-color: $secondaryColor
             }
 
-            &:hover {
+            &:hover,
+            &:focus {
               color: $secondaryColor;
+              outline: none;
 
               &:after {
                 width: 40px;
