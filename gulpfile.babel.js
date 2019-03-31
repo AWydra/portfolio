@@ -32,7 +32,8 @@ gulp.task('sass', () => {
     return gulp.src(config.paths.src.sass)
         .pipe(sass())
         .pipe(autoprefixer({
-            browsers: ['last 2 versions']
+            browsers: ['last 2 versions'],
+            grid: true
         }))
         .pipe(clean())
         .pipe(gulp.dest(config.paths.dist.css))
