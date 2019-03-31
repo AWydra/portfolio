@@ -4,80 +4,60 @@
     display: grid;
     grid-column: center-start/ center-end;
     grid-template-columns: repeat(3, minmax(300px, 1fr));
-    grid-gap: 5rem;
+    grid-gap: 4rem;
   }
 
   &__feature-box {
     width: 100%;
-    padding: 20px;
     display: flex;
     flex-direction: column;
-    background-color: $contactBg;
-    border: $contactBorder;
   }
 
   &__figure {
     width: 100%;
     margin: 0;
     position: relative;
-  }
+    border: $contactBorder;
 
-  &__img {
-    width: 100%;
-    height: 100%;
-    display: block;
-  }
+    &:hover {
+      .portfolio__img {
+        transform: scale(1.1) rotate(3deg);
+      }
 
-  &__figcap {
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    left: 0;
-    top: 0;
-    background-color: rgba(0, 0, 0, .5);
-
-    ul {
-      width: max-content;
-      padding: 0;
-      margin: 0;
-      position: absolute;
-      right: 20px;
-      bottom: 20px;
-      color: white;
-      text-align: right;
-      text-transform: uppercase;
-      border-right: $secondaryColor solid 5px;
-      list-style: none;
-
-      li {
-        margin-right: 10px;
+      .portfolio__underscore {
+        width: 20%;
       }
     }
   }
 
-  &__heading {
-    width: max-content;
-    margin: 15px;
-    padding: 15px;
-    background-color: rgba(100%, 100%, 100%, .9);
-    font-size: .9rem;
-    text-transform: uppercase;
+  &__img-container {
+    overflow: hidden;
+  }
+
+  &__img {
+    width: 100%;
+    display: block;
+    transition: $portfolioTransition;
+  }
+
+  &__figcap {
+    width: 100%;
+    background-color: $contactBg;
   }
 
   &__title {
-    margin: 20px 0 0;
-    padding-bottom: 5px;
-    font-size: 1.2rem;
-    border-bottom: $secondaryColor solid 2px;
-  }
-
-  &__description {
-    margin-bottom: 50px;
+    margin: 0;
+    padding-top: $figcapSpacing;
     font-size: 1.1rem;
-    letter-spacing: .1px;
+    font-weight: 500;
+    text-align: center;
   }
 
-  &__btns {
-    margin-top: auto;
+  &__underscore {
+    width: 15%;
+    margin: 1rem auto 0;
+    padding-bottom: $figcapSpacing;
+    border-top-width: 3px;
+    transition: $portfolioTransition;
   }
 }
