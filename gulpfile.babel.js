@@ -2,6 +2,7 @@ import gulp from 'gulp';
 import babel from 'gulp-babel';
 import sass from 'gulp-sass';
 import uglify from 'gulp-uglify';
+import concat from 'gulp-concat';
 import autoprefixer from 'gulp-autoprefixer';
 import clean from 'gulp-clean-css';
 import browserSync from 'browser-sync';
@@ -14,10 +15,8 @@ const config = {
         src: {
             html: './src/**/*.html',
             img: './src/img/**/*.*',
-            sass: ['src/sass/style.scss'],
-            js: [
-                'src/js/main.js',
-            ]
+            sass: 'src/sass/style.scss',
+            js: 'src/js/**/*.js'
         },
         dist: {
             main: './dist',
@@ -50,6 +49,7 @@ gulp.task('js', gulp.series(function js() {
         .pipe(babel({
             presets: ['env']
         }))
+        .pipe(concat('main.js'))
         .pipe(uglify())
         .pipe(gulp.dest(config.paths.dist.js));
 }, refresh));
