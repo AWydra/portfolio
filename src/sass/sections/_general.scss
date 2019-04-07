@@ -19,14 +19,19 @@ hr {
   }
 
   &--contact {
-    width: 30px;
-    height: 30px;
+    width: $iconContact;
+    height: $iconContact;
   }
 
   &--users {
     width: 35px;
     stroke: $secondaryColor;
     stroke-width: 2px;
+  }
+
+  &--quote {
+    width: $iconQuote;
+    height: $iconQuote;
   }
 }
 

@@ -243,17 +243,51 @@
                     </section>
                 </section>
                 <section class="testimonials">
-                    <article class="testimonials__container">
-                        <div class="testimonials__quote">
-                            <svg class="icon icon--theme">
-                                <use xlink:href="img/svg/icons.svg#icon-quote"></use>
-                            </svg>
+                    <div class="testimonials__container">
+                        <div class="testimonials__slider">
+                            <article class="testimonials__item">
+                                <div class="testimonials__quote">
+                                    <svg class="icon icon--theme icon--quote">
+                                        <use xlink:href="img/svg/icons.svg#icon-quote"></use>
+                                    </svg>
+                                </div>
+                                <p class="testimonials__content">Lorem ipsum dolor sit amet consectetur adipisicing
+                                    elit. Dolore debitis repellendus repellat obcaecati cupiditate earum alias ab
+                                    laboriosam, voluptas ratione ipsa saepe deserunt maxime accusamus facere eligendi,
+                                    odit veritatis impedit.
+
+                                </p>
+                                <p class="testimonials__name-holder">John Doe, CEO Founder</p>
+                            </article>
+                            <article class="testimonials__item">
+                                <div class="testimonials__quote">
+                                    <svg class="icon icon--theme icon--quote">
+                                        <use xlink:href="img/svg/icons.svg#icon-quote"></use>
+                                    </svg>
+                                </div>
+                                <p class="testimonials__content">Lorem ipsum, dolor sit amet consectetur adipisicing
+                                    elit.
+                                    Repudiandae dolor quidem
+                                    perferendis eveniet nulla atque, harum blanditiis laboriosam, ipsam ea qui
+                                    cupiditate
+                                </p>
+                                <p class="testimonials__name-holder">John Doe, CEO Founder</p>
+                            </article>
                         </div>
-                        <p class="testimonials__content">Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                            Repudiandae dolor quidem
-                            perferendis eveniet nulla atque, harum blanditiis laboriosam, ipsam ea qui cupiditate</p>
-                        <p class="testimonials__name-holder">John Doe, CEO Founder</p>
-                    </article>
+                        <ul class="controls testimonials__controls" id="customize-controls">
+                            <li class="prev testimonials__prev">
+                                <svg class="icon icon--theme icon--quote">
+                                    <use xlink:href="img/svg/icons.svg#icon-arrow-left"></use>
+                                </svg>
+                            </li>
+                            <li class="next testimonials__next">
+                                <svg class="icon icon--theme icon--quote">
+                                    <use xlink:href="img/svg/icons.svg#icon-arrow-right"></use>
+                                </svg>
+                            </li>
+                        </ul>
+                        <div id="customize-thumbnails"></div>
+                    </div>
                 </section>
 
                 <section class="contact">
@@ -317,6 +351,8 @@
             <footer></footer>
         </div>
     </div>
+
+    <script src="js/main.js"></script>
 </body>
 
 </html>

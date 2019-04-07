@@ -1,0 +1,36 @@
+.testimonials {
+  max-width: unset;
+  background: url(../img/background.jpg) no-repeat center/cover;
+  @include flex();
+
+  &__container {
+    width: 90%;
+    max-width: 1000px;
+    position: relative;
+  }
+
+  &__item {
+    color: white;
+    text-align: center;
+  }
+
+  &__quote {
+    text-align: center;
+  }
+
+  &__content {
+    margin-top: 50px;
+    font-size: 1.7rem;
+    font-weight: 600;
+    line-height: 1.4;
+
+    &::before,
+    &::after {
+      content: '"';
+    }
+  }
+
+  &__name-holder {
+    font-size: 1.2rem;
+  }
+}
