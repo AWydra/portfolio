@@ -18,6 +18,7 @@
     margin: 0;
     position: relative;
     border: $contactBorder;
+    box-shadow: #aaa 0px 0px 17px;
 
     &:hover {
       .portfolio__img {
@@ -42,7 +43,6 @@
 
   &__figcap {
     width: 100%;
-    background-color: $contactBg;
   }
 
   &__title {
