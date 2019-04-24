@@ -8,16 +8,16 @@
   color: $fontColor;
   overflow-y: overlay;
 
-  &__logo-container {
+  &__logo {
     height: $logoHeight;
     border-bottom: #{lighten($mainColor, 10)} solid 1px;
     @include flex(center, center, column);
 
-    img {
+    &-image {
       width: 70%;
     }
 
-    p {
+    &-desc {
       margin-bottom: 0;
       font-size: 1.2rem;
       text-transform: uppercase;
@@ -29,75 +29,73 @@
   &__container {
     height: calc(100% - #{$logoHeight});
     @include flex(space-between, center, column);
+  }
 
-    nav {
-      width: 100%;
-      @include flex();
+  &__nav {
+    width: 100%;
+    @include flex();
+  }
 
-      ul {
-        list-style-type: none;
-        width: 80%;
-        padding: 0;
+  &__list {
+    list-style-type: none;
+    width: 80%;
+    padding: 0;
+  }
 
-        li {
-          padding: 5px 0;
+  &__item {
+    padding: 5px 0;
+  }
 
-          a {
-            @include flex(flex-start, center);
-            width: 100%;
-            padding: 5px;
-            color: $fontColor;
-            text-decoration: none;
-            font-size: 1.25rem;
-            font-weight: 600;
-            text-transform: uppercase;
-            transition: all .1s ease-in-out;
+  &__link {
+    @include flex(flex-start, center);
+    width: 100%;
+    padding: 5px;
+    color: $fontColor;
+    text-decoration: none;
+    font-size: 1.25rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    transition: all .1s ease-in-out;
 
-            &:after {
-              @include pseudo();
-              width: 0px;
-              transition: all .3s ease;
-              height: 5px;
-              margin-left: 15px;
-              background-color: $secondaryColor
-            }
+    &:after {
+      @include pseudo();
+      width: 0px;
+      transition: all .3s ease;
+      height: 5px;
+      margin-left: 15px;
+      background-color: $secondaryColor
+    }
 
-            &:hover,
-            &:focus {
-              color: $secondaryColor;
-              outline: none;
+    &:hover,
+    &:focus {
+      color: $secondaryColor;
+      outline: none;
 
-              &:after {
-                width: 40px;
-              }
-
-            }
-          }
-        }
+      &:after {
+        width: 40px;
       }
+
     }
   }
 
-  &__social-icons {
+  &-icon {
     width: 80%;
     margin-bottom: 20px;
 
-    ul {
+    &__list {
       @include flex(space-around);
       padding: 0;
       margin: 0;
       list-style: none;
+    }
 
-      li {
-        a {
-          padding: 10px;
-          color: $fontColor;
-          transition: all .1s ease-in-out;
+    &__link {
+      padding: 10px;
+      color: $fontColor;
+      transition: all .1s ease-in-out;
 
-          &:hover {
-            color: $secondaryColor;
-          }
-        }
+      &:hover {
+        color: $secondaryColor;
       }
     }
   }

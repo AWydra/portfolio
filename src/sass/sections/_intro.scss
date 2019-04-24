@@ -6,14 +6,14 @@
 
   &__container {
     @include flex(center, center, column);
+  }
 
-    img {
-      width: $introImg;
-      height: $introImg;
-      display: block;
-      border-radius: 50%;
-      border: #8791A2 solid 8px;
-    }
+  &__photo {
+    width: $introImg;
+    height: $introImg;
+    display: block;
+    border-radius: 50%;
+    border: #8791A2 solid 8px;
   }
 
   &__name {
@@ -34,10 +34,10 @@
     font-size: 1.5rem;
     color: $fontColor;
     margin-top: 10px;
+  }
 
-    &--bold {
-      font-weight: 600;
-    }
+  &--bold {
+    font-weight: 600;
   }
 
   &__arrow {

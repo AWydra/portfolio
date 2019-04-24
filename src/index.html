@@ -13,39 +13,51 @@
 <body>
     <div id="wrapper">
         <aside class="navigation">
-            <section class="navigation__logo-container">
-                <img src="img/logo.png" alt="My logo">
-                <p>Arkadiusz Wydra</p>
+            <section class="navigation__logo">
+                <img class="navigation__logo-image" src="img/logo.png" alt="My logo">
+                <p class="navigation__logo-desc">Arkadiusz Wydra</p>
             </section>
             <section class="navigation__container">
-                <nav>
-                    <ul>
-                        <li><a href="#">start</a></li>
-                        <li><a href="#">o mnie</a></li>
-                        <li><a href="#">umiejętności</a></li>
-                        <li><a href="#">portfolio</a></li>
-                        <li><a href="#">referencje</a></li>
-                        <li><a href="#">kontakt</a></li>
+                <nav class="navigation__nav">
+                    <ul class="navigation__list">
+                        <li class="navigation__item">
+                            <a href="#" class="navigation__link">start</a>
+                        </li>
+                        <li class="navigation__item">
+                            <a href="#" class="navigation__link">o mnie</a>
+                        </li>
+                        <li class="navigation__item">
+                            <a href="#" class="navigation__link">umiejętności</a>
+                        </li>
+                        <li class="navigation__item">
+                            <a href="#" class="navigation__link">portfolio</a>
+                        </li>
+                        <li class="navigation__item">
+                            <a href="#" class="navigation__link">referencje</a>
+                        </li>
+                        <li class="navigation__item">
+                            <a href="#" class="navigation__link">kontakt</a>
+                        </li>
                     </ul>
                 </nav>
-                <article class="navigation__social-icons">
-                    <ul>
-                        <li>
-                            <a href="//fb.me/wydramord">
+                <article class="navigation-icon">
+                    <ul class="navigation-icon__list">
+                        <li class="navigation-icon__item">
+                            <a href="//fb.me/wydramord" class="navigation-icon__link">
                                 <svg class="icon">
                                     <use xlink:href="img/svg/icons.svg#icon-facebook"></use>
                                 </svg>
                             </a>
                         </li>
-                        <li>
-                            <a href="//linkedin.com/in/awydra">
+                        <li class="navigation-icon__item">
+                            <a href="//linkedin.com/in/awydra" class="navigation-icon__link">
                                 <svg class="icon">
                                     <use xlink:href="img/svg/icons.svg#icon-linkedin"></use>
                                 </svg>
                             </a>
                         </li>
-                        <li>
-                            <a href="//github.com/AWydra">
+                        <li class="navigation-icon__item">
+                            <a href="//github.com/AWydra" class="navigation-icon__link">
                                 <svg class="icon">
                                     <use xlink:href="img/svg/icons.svg#icon-github"></use>
                                 </svg>
@@ -58,9 +70,9 @@
         <div class="container">
             <header class="intro">
                 <section class="intro__container">
-                    <img src="img/photo_intro.jpg" alt="">
+                    <img class="intro__photo" src="img/photo_intro.jpg" alt="">
                     <h1 class="intro__name">Arkadiusz <span class="intro--surname">Wydra</span></h1>
-                    <p class="intro__subtitle">Junior <span class="intro__subtitle--bold">Front-end Developer</span></p>
+                    <p class="intro__subtitle">Junior <span class="intro--bold">Front-end Developer</span></p>
                 </section>
                 <button class="intro__arrow">
                     <svg class="icon">
@@ -68,24 +80,26 @@
                     </svg>
                 </button>
             </header>
-            <main>
-                <section id="about-me">
+            <main class="page">
+                <section id="about" class="page__section">
                     <header class="title">
                         <div class="title__holder">
                             <h2 class="title__holder--heading">o mnie</h2>
                             <p class="title__holder--subtitle">Najważniejsze informacje o mojej osobie</p>
                         </div>
                     </header>
-                    <section class="about-me">
-                        <div class="about-me__image">
-                            <div class="about-me__image-container">
-                                <img src="img/photo_about.jpg" alt="My person with crossed arms and checkered shirt">
+                    <section class="about">
+                        <div class="about__image">
+                            <div class="about__image-container">
+                                <img class="about__image-file" src="img/photo_about.jpg"
+                                    alt="My person with crossed arms and checkered shirt">
                             </div>
                         </div>
-                        <div class="about-me__content">
-                            <h3 class="about-me--title">Cześć</h3>
-                            <p class="about-me--subtitle">pozwól, że się przedstawię...</p>
-                            <p class="about-me--description">Nazywam się <span>Arkadiusz Wydra</span> i jestem
+                        <div class="about__content">
+                            <h3 class="about__title">Cześć</h3>
+                            <p class="about__subtitle">pozwól, że się przedstawię...</p>
+                            <p class="about__description">Nazywam się <span class="about--highlight">Arkadiusz
+                                    Wydra</span> i jestem
                                 front-end developerem. Uczeń
                                 technikum informatycznego w Zielonej Górze. Zawsze szukam okazji do kodowania i uczenia
                                 się nowych rzeczy. Mam
@@ -94,12 +108,12 @@
                                 HTML, CSS i JavaScript. W moich realizacjach stawiam przede wszystkim na wysoką jakość
                                 kodu i jak najprzyjemniejszą interakcję użytkownika ze stroną.</p>
                             <hr>
-                            <ul class="about-me__info">
-                                <li class="about-me__info-item">
+                            <ul class="about__info">
+                                <li class="about__info-item">
                                     <span>wiek:</span>
                                     <p>18 Lat</p>
                                 </li>
-                                <li class="about-me__info-item">
+                                <li class="about__info-item">
                                     <span>miasto:</span>
                                     <p>Zielona Góra</p>
                                 </li>
@@ -108,7 +122,7 @@
                         </div>
                     </section>
                 </section>
-                <section class="skills">
+                <section class="skills page__section">
                     <header class="title">
                         <div class="title__holder">
                             <h2 class="title__holder--heading">umiejętności</h2>
@@ -172,7 +186,7 @@
                         </article>
                     </section>
                 </section>
-                <section class="portfolio">
+                <section class="portfolio page__section">
                     <header class="title">
                         <div class="title__holder">
                             <h2 class="title__holder--heading">portfolio</h2>
@@ -242,7 +256,7 @@
                         </article>
                     </section>
                 </section>
-                <section class="testimonials">
+                <section class="testimonials page__section">
                     <div class="testimonials__container">
                         <div class="testimonials__slider">
                             <article class="testimonials__item">
@@ -289,8 +303,7 @@
                         <div id="customize-thumbnails"></div>
                     </div>
                 </section>
-
-                <section class="contact">
+                <section class="contact page__section">
                     <header class="title">
                         <div class="title__holder">
                             <h2 class="title__holder--heading">kontakt</h2>
@@ -303,16 +316,16 @@
                                 <svg class="icon icon--theme icon--contact">
                                     <use xlink:href="img/svg/icons.svg#icon-cell-phone"></use>
                                 </svg>
-                                <h6>Telefon</h6>
-                                <a href="#">+48 xxx xxx xxx</a>
-                                <a href="">+48 xxx xxx xxx</a>
+                                <h6 class="contact__info-heading">Telefon</h6>
+                                <a href="#" class="contact__info-anchor">+48 xxx xxx xxx</a>
+                                <a href="" class="contact__info-anchor">+48 xxx xxx xxx</a>
                             </article>
                             <article class="contact__info-item">
                                 <svg class="icon icon--theme icon--contact">
                                     <use xlink:href="img/svg/icons.svg#icon-at"></use>
                                 </svg>
-                                <h6>Email</h6>
-                                <a href="mailto:hello@awydra.pl">
+                                <h6 class="contact__info-heading">Email</h6>
+                                <a href="mailto:hello@awydra.pl" class="contact__info-anchor">
                                     hello@axxxxa.pl
                                 </a>
                             </article>
@@ -320,25 +333,27 @@
                                 <svg class="icon icon--theme icon--contact icon--users">
                                     <use xlink:href="img/svg/icons.svg#icon-users"></use>
                                 </svg>
-                                <h6>Social media</h6>
-                                <a href="//linkedin.com/in/AWydra">linkedin.com/in/AWydra</a>
-                                <a href="//github.com/AWydra">github.com/AWydra</a>
-                                <a href="//fb.me/wydramord">fb.me/wydramord</a>
+                                <h6 class="contact__info-heading">Social media</h6>
+                                <a href="//linkedin.com/in/AWydra"
+                                    class="contact__info-anchor">linkedin.com/in/AWydra</a>
+                                <a href="//github.com/AWydra" class="contact__info-anchor">github.com/AWydra</a>
+                                <a href="//fb.me/wydramord" class="contact__info-anchor">fb.me/wydramord</a>
                             </article>
                         </div>
-                        <article class="contact__form">
-                            <h4>Napisz coś</h4>
-                            <form action="mail.php">
+                        <article class="contact__form-container">
+                            <h4 class="contact__heading">Napisz coś</h4>
+                            <form action="mail.php" class="contact__form">
                                 <div class="contact__input-container">
-                                    <input type="text" name="name" placeholder="Imię">
+                                    <input class="contact__input" type="text" name="name" placeholder="Imię">
                                     <div class="contact__underscore"></div>
                                 </div>
                                 <div class="contact__input-container">
-                                    <input type="email" name="email" placeholder="Email">
+                                    <input class="contact__input" type="email" name="email" placeholder="Email">
                                     <div class="contact__underscore"></div>
                                 </div>
                                 <div class="contact__textarea-container">
-                                    <textarea name="message" placeholder="Treść wiadomości"></textarea>
+                                    <textarea class="contact__textarea" name="message"
+                                        placeholder="Treść wiadomości"></textarea>
                                     <div class="contact__underscore"></div>
                                 </div>
                                 <button class="btn btn--theme btn--medium" type="submit" name="send">Wyślij
