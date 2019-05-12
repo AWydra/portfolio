@@ -33,6 +33,11 @@ hr {
     width: $iconTestimonials;
     height: $iconTestimonials;
   }
+
+  &--skills {
+    width: $skillsIcons;
+    height: $skillsIcons;
+  }
 }
 
 .container {

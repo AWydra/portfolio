@@ -5,6 +5,7 @@ $iconSize: 20px;
 $fontColor: white;
 $sectionTitle: 3.5rem;
 $sectionSubtitle: 1em;
+$boxShadow: #aaa 0px 0px 17px;
 
 //Icons
 $iconContact: 30px;
@@ -20,6 +21,9 @@ $aboutInfoWidth: 70%;
 $aboutInfoMinWidth: 550px;
 $aboutSpaceBetweenHr: 30px;
 
+//Skills
+$skillsIcons: 55px;
+
 //Portfolio
 $portfolioTransition: all .15s ease-in-out;
 $figcapSpacing: 2rem;
@@ -30,6 +34,5 @@ $paginationPosition: -50px;
 
 //Contact
 $contactBg: #F9F9F9;
-$contactPadding: 0 15px;
 $contactBorder: #ddd solid 1px;
 $underscoreHeight: 3px;
