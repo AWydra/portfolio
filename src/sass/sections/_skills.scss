@@ -27,6 +27,10 @@
   }
 
   &__description {
-    font-family: "Open Sans", sans-serif;
+    font-family: $secondaryFont;
+    color: #6c757d;
+    line-height: 1.4rem;
+    font-size: 1.1rem;
+    text-align: center;
   }
 }

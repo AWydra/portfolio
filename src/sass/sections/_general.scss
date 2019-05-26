@@ -1,6 +1,6 @@
 * {
   box-sizing: border-box;
-  font-family: Montserrat, sans-serif;
+  font-family: $mainFont;
 }
 
 hr {
@@ -74,7 +74,7 @@ hr {
 
     &--heading {
       margin: 0;
-      line-height: .75;
+      line-height: 0.75;
       font-size: $sectionTitle;
       text-transform: uppercase;
     }
@@ -101,8 +101,8 @@ hr {
   border: none;
   border-radius: 3px;
   letter-spacing: 1px;
-  text-shadow: 1px 1px 1px rgba(0, 0, 0, .2);
-  transition: all .2s ease-in-out;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
+  transition: all 0.2s ease-in-out;
 
   &--theme {
     color: white;
