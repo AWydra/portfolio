@@ -5,7 +5,7 @@
   flex-direction: $direction;
 }
 
-@mixin pseudo($display: block, $pos: static, $content: '') {
+@mixin pseudo($display: block, $pos: static, $content: "") {
   content: $content;
   display: $display;
   position: $pos;
@@ -15,5 +15,22 @@
 @mixin mq($arg) {
   @media screen and (max-width: nth($arg, 1)) {
     @content;
+  }
+}
+
+@mixin aspect-ratio($class, $width, $height) {
+  position: relative;
+  &:before {
+    display: block;
+    content: "";
+    width: 100%;
+    padding-top: ($height / $width) * 100%;
+  }
+  > .#{$class} {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
   }
 }

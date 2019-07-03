@@ -19,7 +19,7 @@
       position: relative;
       @include flex(center, flex-start, column);
 
-      >.icon {
+      > .icon {
         position: absolute;
         left: 15px;
         top: 20px;
@@ -33,10 +33,10 @@
     }
 
     &-anchor {
-      padding: 7px 0 0;
+      margin: 7px 0 0;
       color: #888;
       font-size: 1.1rem;
-      letter-spacing: .1px;
+      letter-spacing: 0.1px;
       text-decoration: none;
     }
   }
@@ -82,7 +82,7 @@
     &:focus {
       outline: none;
 
-      +.contact__underscore {
+      + .contact__underscore {
         width: 100%;
       }
     }
@@ -101,14 +101,14 @@
     border: $contactBorder;
     resize: none;
 
-    +.contact__underscore {
+    + .contact__underscore {
       top: #{-10px + $underscoreHeight};
     }
 
     &:focus {
       outline: none;
 
-      +.contact__underscore {
+      + .contact__underscore {
         width: 100%;
       }
     }
@@ -120,6 +120,6 @@
     background-color: $secondaryColor;
     position: relative;
     top: #{0px - $underscoreHeight};
-    transition: all .3s ease-in-out;
+    transition: all 0.3s ease-in-out;
   }
 }

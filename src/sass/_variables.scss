@@ -1,6 +1,7 @@
 //Main
 $mainColor: #041230;
 $secondaryColor: #ff7800;
+$grey: #ddd;
 $mainFont: Montserrat, sans-serif;
 $secondaryFont: Nunito, sans-serif;
 $iconSize: 20px;
@@ -36,5 +37,5 @@ $paginationPosition: -50px;
 
 //Contact
 $contactBg: #f9f9f9;
-$contactBorder: #ddd solid 1px;
+$contactBorder: $grey solid 1px;
 $underscoreHeight: 3px;
