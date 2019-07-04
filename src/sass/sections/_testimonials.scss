@@ -1,7 +1,12 @@
 .testimonials {
   max-width: unset;
-  background: url(../img/background.jpg) no-repeat center/cover;
+  position: relative;
+  background: url(../img/testimonials.jpg) no-repeat center/cover;
   @include flex();
+
+  &::before {
+    @extend %bg-overlay;
+  }
 
   &__container {
     width: 90%;

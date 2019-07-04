@@ -6,10 +6,7 @@
   @include flex();
 
   &::before {
-    width: 100%;
-    height: 100%;
-    background-color: rgba($mainColor, 0.8);
-    @include pseudo(block, absolute);
+    @extend %bg-overlay;
   }
 
   &__container {
