@@ -22,7 +22,7 @@
       font-size: 1.2rem;
       text-transform: uppercase;
       font-weight: 600;
-      letter-spacing: .1rem;
+      letter-spacing: 0.1rem;
     }
   }
 
@@ -55,15 +55,15 @@
     font-size: 1.25rem;
     font-weight: 600;
     text-transform: uppercase;
-    transition: all .1s ease-in-out;
+    transition: all 0.1s ease-in-out;
 
     &:after {
       @include pseudo();
       width: 0px;
-      transition: all .3s ease;
+      transition: all 0.3s ease;
       height: 5px;
       margin-left: 15px;
-      background-color: $secondaryColor
+      background-color: $secondaryColor;
     }
 
     &:hover,
@@ -74,7 +74,6 @@
       &:after {
         width: 40px;
       }
-
     }
   }
 
@@ -92,10 +91,17 @@
     &__link {
       padding: 10px;
       color: $fontColor;
-      transition: all .1s ease-in-out;
+      outline: none;
 
-      &:hover {
-        color: $secondaryColor;
+      .icon {
+        transition: $portfolioTransition;
+      }
+
+      &:hover,
+      &:focus {
+        .icon {
+          fill: $secondaryColor;
+        }
       }
     }
   }

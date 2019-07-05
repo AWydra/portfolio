@@ -53,5 +53,10 @@
     background: transparent;
     border: none;
     font-size: 2em;
+    cursor: pointer;
+
+    &:focus {
+      outline: none;
+    }
   }
 }
