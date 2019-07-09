@@ -8,13 +8,14 @@ import clean from "gulp-clean-css";
 import browserSync from "browser-sync";
 import del from "del";
 import tinypng from "gulp-tinypng-unlimited";
+import connect from "gulp-connect-php";
 
 const sync = browserSync.create();
 const reload = sync.reload;
 const config = {
   paths: {
     src: {
-      html: "./src/**/*.html",
+      php: "./src/**/*.php",
       img: "./src/img/**/*.*",
       sass: "src/sass/style.scss",
       js: "src/js/**/*.js"
@@ -66,9 +67,9 @@ gulp.task(
 
 gulp.task(
   "static",
-  gulp.series(function moveHtml() {
+  gulp.series(function movePHP() {
     return gulp
-      .src(config.paths.src.html)
+      .src(config.paths.src.php)
       .pipe(gulp.dest(config.paths.dist.main));
   }, refresh)
 );
@@ -90,9 +91,11 @@ gulp.task("clean", () => {
 gulp.task("build", gulp.series(["clean", "sass", "js", "static", "images"]));
 
 function server() {
-  sync.init({
-    injectChanges: true,
-    server: config.paths.dist.main
+  connect.server({}, function() {
+    sync.init({
+      injectChanges: true,
+      proxy: "127.0.0.1/portfolio/dist"
+    });
   });
 }
 
@@ -103,7 +106,7 @@ gulp.task(
   gulp.series(["default"], function watch() {
     gulp.watch("src/sass/**/*.scss", gulp.series(["sass"]));
     gulp.watch(config.paths.src.js, gulp.series(["js"]));
-    gulp.watch(config.paths.src.html, gulp.series(["static"]));
+    gulp.watch(config.paths.src.php, gulp.series(["static"]));
     gulp.watch(config.paths.src.img, gulp.series(["images"]));
     return server();
   })
