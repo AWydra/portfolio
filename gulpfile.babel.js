@@ -17,8 +17,8 @@ const config = {
     src: {
       php: "./src/**/*.php",
       img: "./src/img/**/*.*",
-      sass: "src/sass/style.scss",
-      js: "src/js/**/*.js"
+      sass: "./src/sass/style.scss",
+      js: "./src/js/**/*.js"
     },
     dist: {
       main: "./dist",
@@ -71,7 +71,14 @@ gulp.task(
     return gulp
       .src(config.paths.src.php)
       .pipe(gulp.dest(config.paths.dist.main));
-  }, refresh)
+  },
+  
+  function moveConfig() {
+    return gulp
+      .src("./src/.htaccess")
+      .pipe(gulp.dest(config.paths.dist.main));
+  },
+  refresh)
 );
 
 gulp.task(
