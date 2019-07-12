@@ -1,6 +1,6 @@
 <header class="intro">
   <section class="intro__container">
-    <img class="intro__photo" src="img/photo_intro.jpg" alt="" />
+    <img class="intro__photo" src="//<?= $_SERVER["SERVER_NAME"] ?>/img/photo_intro.jpg" alt="" />
     <h1 class="intro__name">
       Arkadiusz <span class="intro--surname">Wydra</span>
     </h1>
@@ -10,7 +10,7 @@
   </section>
   <button class="intro__arrow">
     <svg class="icon">
-      <use xlink:href="img/svg/icons.svg#icon-arrows"></use>
+      <use xlink:href="//<?= $_SERVER["SERVER_NAME"] ?>/img/svg/icons.svg#icon-arrows"></use>
     </svg>
   </button>
 </header>
@@ -27,7 +27,7 @@
     <section class="about">
       <div class="about__image">
         <div class="about__image-container">
-          <img class="about__image-file" src="img/photo_about.jpg"
+          <img class="about__image-file" src="//<?= $_SERVER["SERVER_NAME"] ?>/img/photo_about.jpg"
             alt="My person with crossed arms and checkered shirt" />
         </div>
       </div>
@@ -73,13 +73,13 @@
       <article class="skills__feature-box">
         <div class="skills__icon-container">
           <svg class="icon icon--skills">
-            <use xlink:href="img/svg/icons.svg#icon-html5"></use>
+            <use xlink:href="//<?= $_SERVER["SERVER_NAME"] ?>/img/svg/icons.svg#icon-html5"></use>
           </svg>
           <svg class="icon icon--skills">
-            <use xlink:href="img/svg/icons.svg#icon-css3"></use>
+            <use xlink:href="//<?= $_SERVER["SERVER_NAME"] ?>/img/svg/icons.svg#icon-css3"></use>
           </svg>
           <svg class="icon icon--skills">
-            <use xlink:href="img/svg/icons.svg#icon-js"></use>
+            <use xlink:href="//<?= $_SERVER["SERVER_NAME"] ?>/img/svg/icons.svg#icon-js"></use>
           </svg>
         </div>
         <h3 class="skills__heading">HTML | CSS | JavaScript</h3>
@@ -93,13 +93,13 @@
       <article class="skills__feature-box">
         <div class="skills__icon-container">
           <svg class="icon icon--skills">
-            <use xlink:href="img/svg/icons.svg#icon-bootstrap"></use>
+            <use xlink:href="//<?= $_SERVER["SERVER_NAME"] ?>/img/svg/icons.svg#icon-bootstrap"></use>
           </svg>
           <svg class="icon icon--skills">
-            <use xlink:href="img/svg/icons.svg#icon-sass"></use>
+            <use xlink:href="//<?= $_SERVER["SERVER_NAME"] ?>/img/svg/icons.svg#icon-sass"></use>
           </svg>
           <svg class="icon icon--skills">
-            <use xlink:href="img/svg/icons.svg#icon-bem"></use>
+            <use xlink:href="//<?= $_SERVER["SERVER_NAME"] ?>/img/svg/icons.svg#icon-bem"></use>
           </svg>
         </div>
         <h3 class="skills__heading">Bootstrap | Sass | BEM</h3>
@@ -113,16 +113,16 @@
       <article class="skills__feature-box">
         <div class="skills__icon-container">
           <svg class="icon icon--skills">
-            <use xlink:href="img/svg/icons.svg#icon-jquery"></use>
+            <use xlink:href="//<?= $_SERVER["SERVER_NAME"] ?>/img/svg/icons.svg#icon-jquery"></use>
           </svg>
           <svg class="icon icon--skills">
-            <use xlink:href="img/svg/icons.svg#icon-react"></use>
+            <use xlink:href="//<?= $_SERVER["SERVER_NAME"] ?>/img/svg/icons.svg#icon-react"></use>
           </svg>
           <svg class="icon icon--skills">
-            <use xlink:href="img/svg/icons.svg#icon-redux"></use>
+            <use xlink:href="//<?= $_SERVER["SERVER_NAME"] ?>/img/svg/icons.svg#icon-redux"></use>
           </svg>
           <svg class="icon icon--skills">
-            <use xlink:href="img/svg/icons.svg#icon-firebase"></use>
+            <use xlink:href="//<?= $_SERVER["SERVER_NAME"] ?>/img/svg/icons.svg#icon-firebase"></use>
           </svg>
         </div>
         <h3 class="skills__heading">JQuery | React | Redux</h3>
@@ -136,16 +136,16 @@
       <article class="skills__feature-box">
         <div class="skills__icon-container">
           <svg class="icon icon--skills">
-            <use xlink:href="img/svg/icons.svg#icon-git"></use>
+            <use xlink:href="//<?= $_SERVER["SERVER_NAME"] ?>/img/svg/icons.svg#icon-git"></use>
           </svg>
           <svg class="icon icon--skills">
-            <use xlink:href="img/svg/icons.svg#icon-npm"></use>
+            <use xlink:href="//<?= $_SERVER["SERVER_NAME"] ?>/img/svg/icons.svg#icon-npm"></use>
           </svg>
           <svg class="icon icon--skills">
-            <use xlink:href="img/svg/icons.svg#icon-gulp"></use>
+            <use xlink:href="//<?= $_SERVER["SERVER_NAME"] ?>/img/svg/icons.svg#icon-gulp"></use>
           </svg>
           <svg class="icon icon--skills">
-            <use xlink:href="img/svg/icons.svg#icon-babel"></use>
+            <use xlink:href="//<?= $_SERVER["SERVER_NAME"] ?>/img/svg/icons.svg#icon-babel"></use>
           </svg>
         </div>
         <h3 class="skills__heading">Git | npm | Gulp | Babel</h3>
@@ -159,13 +159,13 @@
       <article class="skills__feature-box">
         <div class="skills__icon-container">
           <svg class="icon icon--skills">
-            <use xlink:href="img/svg/icons.svg#icon-adobeps"></use>
+            <use xlink:href="//<?= $_SERVER["SERVER_NAME"] ?>/img/svg/icons.svg#icon-adobeps"></use>
           </svg>
           <svg class="icon icon--skills">
-            <use xlink:href="img/svg/icons.svg#icon-adobeai"></use>
+            <use xlink:href="//<?= $_SERVER["SERVER_NAME"] ?>/img/svg/icons.svg#icon-adobeai"></use>
           </svg>
           <svg class="icon icon--skills">
-            <use xlink:href="img/svg/icons.svg#icon-coreldraw"></use>
+            <use xlink:href="//<?= $_SERVER["SERVER_NAME"] ?>/img/svg/icons.svg#icon-coreldraw"></use>
           </svg>
         </div>
         <h3 class="skills__heading">Programy graficzne</h3>
@@ -179,16 +179,16 @@
       <article class="skills__feature-box">
         <div class="skills__icon-container">
           <svg class="icon icon--skills">
-            <use xlink:href="img/svg/icons.svg#icon-angular"></use>
+            <use xlink:href="//<?= $_SERVER["SERVER_NAME"] ?>/img/svg/icons.svg#icon-angular"></use>
           </svg>
           <svg class="icon icon--skills">
-            <use xlink:href="img/svg/icons.svg#icon-graphql"></use>
+            <use xlink:href="//<?= $_SERVER["SERVER_NAME"] ?>/img/svg/icons.svg#icon-graphql"></use>
           </svg>
           <svg class="icon icon--skills">
-            <use xlink:href="img/svg/icons.svg#icon-nodejs"></use>
+            <use xlink:href="//<?= $_SERVER["SERVER_NAME"] ?>/img/svg/icons.svg#icon-nodejs"></use>
           </svg>
           <svg class="icon icon--skills">
-            <use xlink:href="img/svg/icons.svg#icon-mongodb"></use>
+            <use xlink:href="//<?= $_SERVER["SERVER_NAME"] ?>/img/svg/icons.svg#icon-mongodb"></use>
           </svg>
         </div>
         <h3 class="skills__heading">Mam zamiar nauczyć się</h3>
@@ -284,7 +284,7 @@
         <article class="testimonials__item">
           <div class="testimonials__quote">
             <svg class="icon icon--theme icon--testimonials">
-              <use xlink:href="img/svg/icons.svg#icon-quote"></use>
+              <use xlink:href="//<?= $_SERVER["SERVER_NAME"] ?>/img/svg/icons.svg#icon-quote"></use>
             </svg>
           </div>
           <p class="testimonials__content">
@@ -299,7 +299,7 @@
         <article class="testimonials__item">
           <div class="testimonials__quote">
             <svg class="icon icon--theme icon--testimonials">
-              <use xlink:href="img/svg/icons.svg#icon-quote"></use>
+              <use xlink:href="//<?= $_SERVER["SERVER_NAME"] ?>/img/svg/icons.svg#icon-quote"></use>
             </svg>
           </div>
           <p class="testimonials__content">
@@ -313,12 +313,12 @@
       <ul class="controls testimonials__controls" id="customize-controls">
         <li class="prev testimonials__prev">
           <svg class="icon icon--theme icon--testimonials">
-            <use xlink:href="img/svg/icons.svg#icon-arrow-left"></use>
+            <use xlink:href="//<?= $_SERVER["SERVER_NAME"] ?>/img/svg/icons.svg#icon-arrow-left"></use>
           </svg>
         </li>
         <li class="next testimonials__next">
           <svg class="icon icon--theme icon--testimonials">
-            <use xlink:href="img/svg/icons.svg#icon-arrow-right"></use>
+            <use xlink:href="//<?= $_SERVER["SERVER_NAME"] ?>/img/svg/icons.svg#icon-arrow-right"></use>
           </svg>
         </li>
       </ul>
@@ -338,7 +338,7 @@
       <div class="contact__info">
         <article class="contact__info-item">
           <svg class="icon icon--theme icon--contact">
-            <use xlink:href="img/svg/icons.svg#icon-cell-phone"></use>
+            <use xlink:href="//<?= $_SERVER["SERVER_NAME"] ?>/img/svg/icons.svg#icon-cell-phone"></use>
           </svg>
           <h6 class="contact__info-heading">Telefon</h6>
           <a href="#" class="contact__info-anchor">+48 xxx xxx xxx</a>
@@ -346,7 +346,7 @@
         </article>
         <article class="contact__info-item">
           <svg class="icon icon--theme icon--contact">
-            <use xlink:href="img/svg/icons.svg#icon-at"></use>
+            <use xlink:href="//<?= $_SERVER["SERVER_NAME"] ?>/img/svg/icons.svg#icon-at"></use>
           </svg>
           <h6 class="contact__info-heading">Email</h6>
           <a href="mailto:hello@awydra.pl" class="contact__info-anchor">
@@ -355,7 +355,7 @@
         </article>
         <article class="contact__info-item">
           <svg class="icon icon--theme icon--contact icon--users">
-            <use xlink:href="img/svg/icons.svg#icon-users"></use>
+            <use xlink:href="//<?= $_SERVER["SERVER_NAME"] ?>/img/svg/icons.svg#icon-users"></use>
           </svg>
           <h6 class="contact__info-heading">Social media</h6>
           <a href="//linkedin.com/in/AWydra" class="contact__info-anchor" target="_blank">LinkedIn</a>
