@@ -1,0 +1,13 @@
+.error404 {
+  min-height: calc(100vh - 78px);
+  padding: 100px 7%;
+  @include flex();
+
+  &__container{
+    width: 70%;
+  }
+
+  &__text{
+    font-size: 2rem;
+  }
+}

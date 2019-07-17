@@ -58,6 +58,7 @@ hr {
   width: 100%;
   height: 80px;
   margin-bottom: 80px;
+  $parent: &;
   @include flex(flex-start);
 
   &::before {
@@ -82,6 +83,14 @@ hr {
     &--subtitle {
       margin: 0;
       font-size: 1.2rem;
+    }
+  }
+
+  &--error404{
+    #{$parent}__holder{
+      &--heading {
+        font-size: 4rem;
+      }
     }
   }
 }
