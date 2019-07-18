@@ -56,16 +56,17 @@ hr {
 
 .title {
   width: 100%;
-  height: 80px;
   margin-bottom: 80px;
+  position: relative;
   $parent: &;
   @include flex(flex-start);
 
   &::before {
-    @include pseudo();
+    @include pseudo(block, absolute);
     background-color: $secondaryColor;
     width: 5px;
     height: 100%;
+    top: 4%;
   }
 
   &__holder {
@@ -75,7 +76,6 @@ hr {
 
     &--heading {
       margin: 0;
-      line-height: 0.75;
       font-size: $sectionTitle;
       text-transform: uppercase;
     }
@@ -86,8 +86,8 @@ hr {
     }
   }
 
-  &--error404{
-    #{$parent}__holder{
+  &--error404 {
+    #{$parent}__holder {
       &--heading {
         font-size: 4rem;
       }
