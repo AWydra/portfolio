@@ -42,6 +42,14 @@ hr {
 
 .container {
   margin-left: $navWidth;
+
+  @include mq(1450px) {
+    margin-left: $navWidth1449;
+  }
+
+  @include mq(1299px) {
+    margin-left: $navWidth1299 - $navWidth1299;
+  }
 }
 
 .page {

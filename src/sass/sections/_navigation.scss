@@ -15,6 +15,13 @@
 
     &-image {
       width: 70%;
+      display: block;
+
+      @include mq(1299px) {
+        width: auto;
+        height: $navHeight1299 - 30px;
+        margin-left: 20px;
+      }
     }
 
     &-desc {
@@ -23,12 +30,25 @@
       text-transform: uppercase;
       font-weight: 600;
       letter-spacing: 0.1rem;
+
+      @include mq(1299px) {
+        display: none;
+      }
+    }
+
+    @include mq(1299px) {
+      height: auto;
+      border: none;
     }
   }
 
   &__container {
     height: calc(100% - #{$logoHeight});
     @include flex(space-between, center, column);
+
+    @include mq(1299px) {
+      display: none;
+    }
   }
 
   &__nav {
@@ -104,5 +124,65 @@
         }
       }
     }
+  }
+
+  &__hamburger {
+    width: $navHeight1299 - 30px;
+    height: $navHeight1299 - 30px;
+    margin-right: 20px;
+    padding: 0;
+    display: none;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    $parent: &;
+
+    &-inner,
+    &-inner::before,
+    &-inner::after {
+      width: 100%;
+      height: $hamburgerItemHeight;
+      background-color: white;
+      border-radius: $hamburgerItemHeight / 2;
+
+      #{$parent}:hover &,
+      #{$parent}:focus & {
+        background-color: $secondaryColor;
+      }
+    }
+
+    &-inner {
+      position: relative;
+
+      &::before,
+      &::after {
+        @include pseudo(block, absolute);
+      }
+
+      &::before {
+        top: -10px;
+      }
+
+      &::after {
+        bottom: -10px;
+      }
+    }
+
+    @include mq(1299px) {
+      display: block;
+    }
+  }
+
+  @include mq(1449px) {
+    width: $navWidth1449;
+  }
+
+  @include mq(1299px) {
+    width: $navWidth1299;
+    height: $navHeight1299;
+    position: fixed;
+    z-index: 99;
+
+    @include flex(space-between, center);
   }
 }

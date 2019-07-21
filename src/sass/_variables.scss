@@ -18,6 +18,7 @@ $iconTestimonials: 40px;
 $navWidth: 300px;
 $introImg: 250px;
 $logoHeight: 250px;
+$hamburgerItemHeight: 3px;
 
 //About
 $aboutInfoWidth: 70%;
@@ -39,3 +40,14 @@ $paginationPosition: -50px;
 $contactBg: #f9f9f9;
 $contactBorder: $grey solid 1px;
 $underscoreHeight: 3px;
+
+/* ----------------------------------------------------------------
+  Responsiveness
+-----------------------------------------------------------------*/
+
+//1449
+$navWidth1449: 270px;
+
+//1299
+$navWidth1299: 100%;
+$navHeight1299: 60px;

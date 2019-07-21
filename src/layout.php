@@ -17,6 +17,9 @@
         <img class="navigation__logo-image" src="//<?= $_SERVER["SERVER_NAME"] ?>/img/logo.png" alt="My logo" />
         <p class="navigation__logo-desc">Arkadiusz Wydra</p>
       </section>
+      <button class="navigation__hamburger">
+        <div class="navigation__hamburger-inner"></div>
+      </button>
       <section class="navigation__container">
         <nav class="navigation__nav">
           <ul class="navigation__list">
