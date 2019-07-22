@@ -1,4 +1,6 @@
 <?php
+require_once 'shadow/db.php';
+
 $illegalLimit = 3;
 $explodedValue = 3;
 $illegal = false;
@@ -26,8 +28,6 @@ if ($illegal) { //If slug is incorrect
   include 'layout.php';
   exit;
 }
-
-//Connect with DB here;
 
 $page = 'project.php';
 include 'layout.php';
