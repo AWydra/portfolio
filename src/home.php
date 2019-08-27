@@ -2,7 +2,7 @@
   <section class="intro__container">
     <img class="intro__photo" src="//<?= $_SERVER["SERVER_NAME"] ?>/img/photo_intro.jpg" alt="" />
     <h1 class="intro__name">
-      Arkadiusz <span class="intro--surname">Wydra</span>
+      Arkadiusz <span class="intro__surname">Wydra</span>
     </h1>
     <p class="intro__subtitle">
       Junior <span class="intro--bold">Front-end Developer</span>

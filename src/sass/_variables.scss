@@ -10,6 +10,12 @@ $sectionTitle: 3.5rem;
 $sectionSubtitle: 1em;
 $boxShadow: #aaa 0px 0px 17px;
 
+//Breakpoints:
+$sm: 575px;
+$md: 767px;
+$lg: 991px;
+$xl: 1199px;
+
 //Icons
 $iconContact: 30px;
 $iconTestimonials: 40px;
@@ -40,14 +46,3 @@ $paginationPosition: -50px;
 $contactBg: #f9f9f9;
 $contactBorder: $grey solid 1px;
 $underscoreHeight: 3px;
-
-/* ----------------------------------------------------------------
-  Responsiveness
------------------------------------------------------------------*/
-
-//1449
-$navWidth1449: 270px;
-
-//1299
-$navWidth1299: 100%;
-$navHeight1299: 60px;

@@ -2,7 +2,7 @@
   width: 100%;
   height: 100vh;
   position: relative;
-  background: url("../img/background.jpg") no-repeat center/cover;
+  background: url("../img/background.jpg") no-repeat 82% / cover;
   @include flex();
 
   &::before {
@@ -29,9 +29,13 @@
     font-weight: 500;
     margin: 20px 0 0;
     color: $fontColor;
+
+    @include mq($sm) {
+      font-size: 2rem;
+    }
   }
 
-  &--surname {
+  &__surname {
     color: $secondaryColor;
   }
 
@@ -40,6 +44,10 @@
     font-size: 1.5rem;
     color: $fontColor;
     margin-top: 10px;
+
+    @include mq($sm) {
+      font-size: 1.2rem;
+    }
   }
 
   &--bold {

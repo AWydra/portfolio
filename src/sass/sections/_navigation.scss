@@ -5,12 +5,13 @@
   left: 0;
   top: 0;
   background-color: $mainColor;
+  border-bottom: solid lighten($mainColor, 7%) 1px;
   color: $fontColor;
   overflow-y: overlay;
 
   &__logo {
     height: $logoHeight;
-    border-bottom: #{lighten($mainColor, 10)} solid 1px;
+    border-bottom: lighten($mainColor, 10) solid 1px;
     @include flex(center, center, column);
 
     &-image {
@@ -174,12 +175,12 @@
   }
 
   @include mq(1449px) {
-    width: $navWidth1449;
+    width: 270px;
   }
 
   @include mq(1299px) {
-    width: $navWidth1299;
-    height: $navHeight1299;
+    width: 100%;
+    height: 60px;
     position: fixed;
     z-index: 99;
 
