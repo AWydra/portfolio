@@ -9,6 +9,10 @@
   color: $fontColor;
   overflow-y: overlay;
 
+  @include mq(1299px) {
+    overflow-y: visible;
+  }
+
   &__logo {
     height: $logoHeight;
     border-bottom: lighten($mainColor, 10) solid 1px;
@@ -20,7 +24,7 @@
 
       @include mq(1299px) {
         width: auto;
-        height: $navHeight1299 - 30px;
+        height: 30px;
         margin-left: 20px;
       }
     }
@@ -48,8 +52,18 @@
     @include flex(space-between, center, column);
 
     @include mq(1299px) {
+      width: 100%;
+      height: auto;
       display: none;
+      position: absolute;
+      top: calc(100% + 1px);
+      background-color: $mainColor;
+      border-bottom: lighten($mainColor, 10) solid 1px;
     }
+  }
+
+  &--active {
+    display: flex;
   }
 
   &__nav {
@@ -61,6 +75,12 @@
     list-style-type: none;
     width: 80%;
     padding: 0;
+
+    @include mq(1299px) {
+      width: 100%;
+      margin: 5px 0;
+      padding-left: 5%;
+    }
   }
 
   &__item {
@@ -102,6 +122,10 @@
     width: 80%;
     margin-bottom: 20px;
 
+    @include mq(1299px) {
+      margin-bottom: 5px;
+    }
+
     &__list {
       @include flex(space-around);
       padding: 0;
@@ -128,8 +152,8 @@
   }
 
   &__hamburger {
-    width: $navHeight1299 - 30px;
-    height: $navHeight1299 - 30px;
+    width: 30px;
+    height: 30px;
     margin-right: 20px;
     padding: 0;
     display: none;
