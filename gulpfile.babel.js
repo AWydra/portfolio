@@ -67,18 +67,20 @@ gulp.task(
 
 gulp.task(
   "static",
-  gulp.series(function movePHP() {
-    return gulp
-      .src(config.paths.src.php)
-      .pipe(gulp.dest(config.paths.dist.main));
-  },
-  
-  function moveConfig() {
-    return gulp
-      .src("./src/.htaccess")
-      .pipe(gulp.dest(config.paths.dist.main));
-  },
-  refresh)
+  gulp.series(
+    function movePHP() {
+      return gulp
+        .src(config.paths.src.php)
+        .pipe(gulp.dest(config.paths.dist.main));
+    },
+
+    function moveConfig() {
+      return gulp
+        .src("./src/.htaccess")
+        .pipe(gulp.dest(config.paths.dist.main));
+    },
+    refresh
+  )
 );
 
 gulp.task(
@@ -101,6 +103,7 @@ function server() {
   connect.server({}, function() {
     sync.init({
       injectChanges: true,
+      open: "external",
       proxy: "127.0.0.1/portfolio/dist"
     });
   });

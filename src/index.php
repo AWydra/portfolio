@@ -1,12 +1,13 @@
 <?php
 require_once 'shadow/db.php';
 
+$address = getHostByName(getHostName());
 $illegalLimit = 3;
 $explodedValue = 3;
 $illegal = false;
 
-if(strpos($_SERVER["SERVER_NAME"], '127.0.0.1') !== false) { //If site works on localhost
-  $_SERVER["SERVER_NAME"] = 'localhost:3000/portfolio/dist';
+if(strpos($address, '192.168') !== false) { //If site works on localhost
+  $_SERVER["SERVER_NAME"] = "$address:3000/portfolio/dist";
   $illegalLimit = 5;
   $explodedValue = 3;
 }
