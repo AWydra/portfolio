@@ -36,7 +36,7 @@
         <p class="about__subtitle">pozwól, że się przedstawię...</p>
         <p class="about__description">
           Nazywam się
-          <span class="about--highlight">Arkadiusz Wydra</span> i jestem
+          <span class="about__highlight">Arkadiusz Wydra</span> i jestem
           front-end developerem. Uczeń technikum informatycznego w
           Zielonej Górze. Zawsze szukam okazji do kodowania i uczenia
           się nowych rzeczy. Mam ponad 10 miesięcy komercyjnego
@@ -45,15 +45,15 @@
           realizacjach stawiam przede wszystkim na wysoką jakość kodu i
           jak najprzyjemniejszą interakcję użytkownika ze stroną.
         </p>
-        <hr />
+        <hr class="about__line" />
         <ul class="about__info">
           <li class="about__info-item">
-            <span>wiek:</span>
-            <p>18 Lat</p>
+            <span class="about__info-key">wiek:</span>
+            <p class="about__info-value">18 Lat</p>
           </li>
           <li class="about__info-item">
-            <span>miasto:</span>
-            <p>Zielona Góra</p>
+            <span class="about__info-key">miasto:</span>
+            <p class="about__info-value">Zielona Góra</p>
           </li>
         </ul>
         <a href="cv.pdf" class="btn btn--theme" download>pobierz cv</a>

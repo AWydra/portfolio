@@ -69,6 +69,15 @@ hr {
   $parent: &;
   @include flex(flex-start);
 
+  @include mq(850px) {
+    margin-bottom: 60px;
+    font-size: 0.85rem;
+  }
+
+  @include mq($sm) {
+    font-size: 0.75rem;
+  }
+
   &::before {
     @include pseudo(block, absolute);
     background-color: $secondaryColor;
@@ -90,7 +99,7 @@ hr {
 
     &--subtitle {
       margin: 0;
-      font-size: 1.2rem;
+      font-size: $sectionSubtitle;
     }
   }
 
@@ -143,4 +152,8 @@ hr {
     padding: 0;
     text-align: center;
   }
+}
+
+.page__section:not(#about) {
+  display: none;
 }
