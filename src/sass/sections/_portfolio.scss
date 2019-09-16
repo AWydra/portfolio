@@ -1,9 +1,6 @@
 .portfolio {
   &__container {
-    display: grid;
-    grid-column: center-start/ center-end;
-    grid-template-columns: repeat(3, minmax(250px, 1fr));
-    grid-gap: 3rem;
+    @extend %grid-rwd;
   }
 
   &__link {

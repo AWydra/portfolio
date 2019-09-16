@@ -1,21 +1,23 @@
 .about {
-  @include flex();
+  &__container {
+    @include flex();
 
-  @include mq(1380px) {
-    font-size: 0.85rem;
-  }
+    @include mq(1380px) {
+      font-size: 0.85rem;
+    }
 
-  @include mq(1080px) {
-    font-size: 0.8rem;
-  }
+    @include mq(1080px) {
+      font-size: 0.8rem;
+    }
 
-  @include mq(850px) {
-    flex-wrap: wrap;
-    font-size: 1rem;
-  }
+    @include mq(850px) {
+      flex-wrap: wrap;
+      font-size: 1rem;
+    }
 
-  @include mq($sm) {
-    font-size: 0.8rem;
+    @include mq($sm) {
+      font-size: 0.8rem;
+    }
   }
 
   &__image {

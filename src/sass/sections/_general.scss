@@ -63,7 +63,15 @@ hr {
   &__section {
     width: 100%;
     max-width: 1700px;
-    padding: 100px 7%;
+    padding: 90px 7%;
+
+    @include mq(1500px) {
+      padding: 50px 7%;
+    }
+
+    @include mq($lg) {
+      padding: 50px 5%;
+    }
   }
 }
 
@@ -163,6 +171,6 @@ hr {
   }
 }
 
-.page__section:not(#about, .skills) {
+.page__section:not(#about, #skills, #portfolio) {
   display: none;
 }
