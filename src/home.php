@@ -1,4 +1,4 @@
-<header class="intro">
+<header id="intro" class="intro">
   <section class="intro__container">
     <img class="intro__photo" src="//<?= $_SERVER["SERVER_NAME"] ?>/img/photo_intro.jpg" alt="" />
     <h1 class="intro__name">
@@ -15,7 +15,7 @@
   </button>
 </header>
 <main class="page">
-  <section id="about" class="page__section">
+  <section id="about" class="about page__section">
     <header class="title">
       <div class="title__holder">
         <h2 class="title__holder--heading">o mnie</h2>
@@ -24,7 +24,7 @@
         </p>
       </div>
     </header>
-    <section class="about">
+    <section class="about__container">
       <div class="about__image">
         <div class="about__image-container">
           <img class="about__image-file" src="//<?= $_SERVER["SERVER_NAME"] ?>/img/photo_about.jpg"
@@ -60,7 +60,7 @@
       </div>
     </section>
   </section>
-  <section class="skills page__section">
+  <section id="skills" class="skills page__section">
     <header class="title">
       <div class="title__holder">
         <h2 class="title__holder--heading">umiejętności</h2>
@@ -201,7 +201,7 @@
       </article>
     </section>
   </section>
-  <section class="portfolio page__section">
+  <section id="portfolio" class="portfolio page__section">
     <header class="title">
       <div class="title__holder">
         <h2 class="title__holder--heading">portfolio</h2>
@@ -278,7 +278,7 @@
       </article>
     </section>
   </section>
-  <section class="testimonials page__section">
+  <section id="testimonials" class="testimonials page__section">
     <div class="testimonials__container">
       <div class="testimonials__slider">
         <article class="testimonials__item">
@@ -325,7 +325,7 @@
       <div id="customize-thumbnails"></div>
     </div>
   </section>
-  <section class="contact page__section">
+  <section id="contact" class="contact page__section">
     <header class="title">
       <div class="title__holder">
         <h2 class="title__holder--heading">kontakt</h2>

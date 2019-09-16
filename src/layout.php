@@ -24,22 +24,22 @@
         <nav class="navigation__nav">
           <ul class="navigation__list">
             <li class="navigation__item">
-              <a href="#" class="navigation__link">start</a>
+              <a href="#intro" class="navigation__link">start</a>
             </li>
             <li class="navigation__item">
-              <a href="#" class="navigation__link">o mnie</a>
+              <a href="#about" class="navigation__link">o mnie</a>
             </li>
             <li class="navigation__item">
-              <a href="#" class="navigation__link">umiejętności</a>
+              <a href="#skills" class="navigation__link">umiejętności</a>
             </li>
             <li class="navigation__item">
-              <a href="#" class="navigation__link">portfolio</a>
+              <a href="#portfolio" class="navigation__link">portfolio</a>
             </li>
             <li class="navigation__item">
-              <a href="#" class="navigation__link">referencje</a>
+              <a href="#testimonials" class="navigation__link">referencje</a>
             </li>
             <li class="navigation__item">
-              <a href="#" class="navigation__link">kontakt</a>
+              <a href="#contact" class="navigation__link">kontakt</a>
             </li>
           </ul>
         </nav>
