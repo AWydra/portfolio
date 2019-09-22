@@ -12,6 +12,19 @@
     width: 90%;
     max-width: 1000px;
     position: relative;
+
+    @include mq($lg) {
+      width: 100%;
+    }
+  }
+
+  &__prev,
+  &__next {
+    display: flex;
+
+    @include mq($lg) {
+      display: none;
+    }
   }
 
   &__item {
@@ -32,6 +45,11 @@
     &::before,
     &::after {
       content: '"';
+    }
+
+    @include mq($lg) {
+      font-size: 1.3rem;
+      line-height: 1.5;
     }
   }
 

@@ -287,13 +287,11 @@
               <use xlink:href="//<?= $_SERVER["SERVER_NAME"] ?>/img/svg/icons.svg#icon-quote"></use>
             </svg>
           </div>
-          <p class="testimonials__content">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+          <p class="testimonials__content">Lorem ipsum dolor sit amet consectetur adipisicing elit.
             Dolore debitis repellendus repellat obcaecati cupiditate
             earum alias ab laboriosam, voluptas ratione ipsa saepe
             deserunt maxime accusamus facere eligendi, odit veritatis
-            impedit.
-          </p>
+            impedit.</p>
           <p class="testimonials__name-holder">John Doe, CEO Founder</p>
         </article>
         <article class="testimonials__item">
@@ -302,11 +300,9 @@
               <use xlink:href="//<?= $_SERVER["SERVER_NAME"] ?>/img/svg/icons.svg#icon-quote"></use>
             </svg>
           </div>
-          <p class="testimonials__content">
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+          <p class="testimonials__content">Lorem ipsum, dolor sit amet consectetur adipisicing elit.
             Repudiandae dolor quidem perferendis eveniet nulla atque,
-            harum blanditiis laboriosam, ipsam ea qui cupiditate
-          </p>
+            harum blanditiis laboriosam, ipsam ea qui cupiditate</p>
           <p class="testimonials__name-holder">John Doe, CEO Founder</p>
         </article>
       </div>

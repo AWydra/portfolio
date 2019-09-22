@@ -3,7 +3,7 @@
   height: 100vh;
   min-height: 550px;
   position: relative;
-  background: url("../img/background.jpg") no-repeat center / cover;
+  background: url("../img/background.jpg") no-repeat 80% / cover;
   @include flex();
 
   &::before {

@@ -171,6 +171,6 @@ hr {
   }
 }
 
-.page__section:not(#about, #skills, #portfolio) {
+.page__section:not(#about, #skills, #portfolio, #testimonials) {
   display: none;
 }
