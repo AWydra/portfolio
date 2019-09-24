@@ -3,6 +3,10 @@
     display: grid;
     grid-template-columns: 300px 1fr;
     grid-gap: 1.5rem;
+
+    @include mq($md) {
+      grid-template-columns: 1fr;
+    }
   }
 
   &__info {
@@ -83,12 +87,17 @@
   &__input-container {
     width: 50%;
 
-    &:first-child {
-      padding-right: 20px;
+    @include mq($sm) {
+      width: 100%;
+      padding-top: 16px;
     }
 
-    &:last-child {
-      padding-left: 20px;
+    &:first-child {
+      padding-right: 20px;
+
+      @include mq($sm) {
+        padding: 0;
+      }
     }
   }
 
@@ -107,18 +116,22 @@
     }
   }
 
-  &__textarea-container {
-    width: 100%;
-    height: 60%;
-    margin: 15px 0;
-  }
-
   &__textarea {
     width: 100%;
     height: 100%;
     padding: 20px;
     border: $contactBorder;
     resize: none;
+
+    @include mq($md) {
+      min-height: 150px;
+    }
+
+    &-container {
+      width: 100%;
+      height: 60%;
+      margin: 15px 0;
+    }
 
     + .contact__underscore {
       top: #{-10px + $underscoreHeight};
