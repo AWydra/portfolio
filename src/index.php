@@ -37,5 +37,17 @@ $page = 'project.php';
 $css = 'project.css';
 include 'layout.php';
 
-$url = $urlExploded[$explodedValue];
+$slug = $urlExploded[$explodedValue];
+
+$stmt = $pdo->prepare("SELECT * FROM portfolio WHERE slug=:slug");
+$stmt->execute(['slug' => $slug]);
+$data = $stmt->fetch();
+
+$heading = $data['heading'];
+$details = unserialize($data['details']);
+$description = $data['description'];
+$images = unserialize($data['images']);
+$code = $data['code'];
+$live = $data['live'];
+
 ?>
