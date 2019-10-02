@@ -94,9 +94,13 @@ hr {
   &::before {
     @include pseudo(block, absolute);
     background-color: $secondaryColor;
-    width: 5px;
+    width: 10px;
     height: 100%;
     top: 4%;
+
+    @include mq($md) {
+      width: 7px;
+    }
   }
 
   &__holder {

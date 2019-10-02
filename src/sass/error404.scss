@@ -1,13 +1,17 @@
+@import "variables";
+@import "mixins";
+@import "reset";
+
 .error404 {
   min-height: calc(100vh - 78px);
   padding: 100px 7%;
   @include flex();
 
-  &__container{
+  &__container {
     width: 70%;
   }
 
-  &__text{
+  &__text {
     font-size: 2rem;
   }
 }

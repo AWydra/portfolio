@@ -1,16 +1,7 @@
-@import 'variables';
-@import 'mixins';
-@import 'reset';
+@import "variables";
+@import "mixins";
+@import "reset";
 
-@import 'plugins/tiny-slider';
-
-@import 'sections/general';
-@import 'sections/navigation';
-@import 'sections/intro';
-@import 'sections/about';
-@import 'sections/skills';
-@import 'sections/portfolio';
-@import 'sections/testimonials';
-@import 'sections/contact';
-@import 'sections/error404';
-@import 'sections/footer';
+@import "sections/general";
+@import "sections/navigation";
+@import "sections/footer";

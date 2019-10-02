@@ -17,7 +17,12 @@ const config = {
     src: {
       php: "./src/**/*.php",
       img: "./src/img/**/*.*",
-      sass: "./src/sass/style.scss",
+      sass: [
+        "./src/sass/style.scss",
+        "./src/sass/home.scss",
+        "./src/sass/project.scss",
+        "./src/sass/error404.scss"
+      ],
       js: "./src/js/**/*.js"
     },
     dist: {
