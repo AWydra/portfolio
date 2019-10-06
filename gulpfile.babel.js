@@ -2,13 +2,13 @@ import gulp from "gulp";
 import babel from "gulp-babel";
 import sass from "gulp-sass";
 import uglify from "gulp-uglify";
-import concat from "gulp-concat";
 import autoprefixer from "gulp-autoprefixer";
 import clean from "gulp-clean-css";
 import browserSync from "browser-sync";
 import del from "del";
 import tinypng from "gulp-tinypng-unlimited";
 import connect from "gulp-connect-php";
+import include from "gulp-include";
 
 const sync = browserSync.create();
 const reload = sync.reload;
@@ -23,7 +23,7 @@ const config = {
         "./src/sass/project.scss",
         "./src/sass/error404.scss"
       ],
-      js: "./src/js/**/*.js"
+      js: ["./src/js/home.js", "./src/js/project.js"]
     },
     dist: {
       main: "./dist",
@@ -59,12 +59,12 @@ gulp.task(
   gulp.series(function js() {
     return gulp
       .src(config.paths.src.js)
+      .pipe(include())
       .pipe(
         babel({
           presets: ["env"]
         })
       )
-      .pipe(concat("main.js"))
       .pipe(uglify())
       .pipe(gulp.dest(config.paths.dist.js));
   }, refresh)
@@ -120,7 +120,7 @@ gulp.task(
   "watch",
   gulp.series(["default"], function watch() {
     gulp.watch("src/sass/**/*.scss", gulp.series(["sass"]));
-    gulp.watch(config.paths.src.js, gulp.series(["js"]));
+    gulp.watch("src/js/**/*.js", gulp.series(["js"]));
     gulp.watch(config.paths.src.php, gulp.series(["static"]));
     gulp.watch(config.paths.src.img, gulp.series(["images"]));
     return server();
