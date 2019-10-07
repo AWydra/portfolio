@@ -22,19 +22,19 @@ if(sizeof($urlExploded) > $illegalLimit) {
 
 if ($illegal) { //If slug is incorrect
   $page = '404.php';
-  $css = 'error404.css';
+  $file = 'error404';
   include 'layout.php';
   exit;
 } else if (sizeof($urlExploded) === $illegalLimit - 1){ //If there is no slug
   $page = 'home.php';
-  $css = 'home.css';
+  $file = 'home';
 
   include 'layout.php';
   exit;
 }
 
 $page = 'project.php';
-$css = 'project.css';
+$file = 'project';
 include 'layout.php';
 
 $slug = $urlExploded[$explodedValue];

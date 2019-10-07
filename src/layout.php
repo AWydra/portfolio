@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
   <link rel="stylesheet" href="//<?= $_SERVER["SERVER_NAME"] ?>/css/style.css" />
-  <link rel="stylesheet" href="//<?= $_SERVER["SERVER_NAME"] ?>/css/<?= $css ?>" />
+  <link rel="stylesheet" href="//<?= $_SERVER["SERVER_NAME"] ?>/css/<?= $file ?>.css" />
   <link href="//fonts.googleapis.com/css?family=Montserrat:400,500,600|Nunito&display=swap" rel="stylesheet" />
   <title>Arkadiusz Wydra | Junior Front-end Developer</title>
 </head>
@@ -79,7 +79,7 @@
     </div>
   </div>
 
-  <script src="//<?= $_SERVER["SERVER_NAME"] ?>/js/main.js"></script>
+  <script src="//<?= $_SERVER["SERVER_NAME"] ?>/js/<?= $file ?>.js"></script>
 </body>
 
 </html>

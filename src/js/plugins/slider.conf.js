@@ -1,6 +1,6 @@
-window.addEventListener('DOMContentLoaded', () => {
+document.addEventListener("DOMContentLoaded", () => {
   const slider = tns({
-    container: '.testimonials__slider',
+    container: ".testimonials__slider",
     items: 1,
     slideBy: "page",
     controlsContainer: "#customize-controls",
