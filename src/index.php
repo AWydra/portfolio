@@ -33,15 +33,18 @@ if ($illegal) { //If slug is incorrect
   exit;
 }
 
-$page = 'project.php';
-$file = 'project';
-include 'layout.php';
-
 $slug = $urlExploded[$explodedValue];
 
 $stmt = $pdo->prepare("SELECT * FROM portfolio WHERE slug=:slug");
 $stmt->execute(['slug' => $slug]);
 $data = $stmt->fetch();
+
+if(!$data) {
+  $page = '404.php';
+  $file = 'error404';
+  include 'layout.php';
+  exit;
+}
 
 $heading = $data['heading'];
 $details = unserialize($data['details']);
@@ -49,5 +52,9 @@ $description = $data['description'];
 $images = unserialize($data['images']);
 $code = $data['code'];
 $live = $data['live'];
+$technologies = unserialize($data['technologies']);
 
+$page = 'project.php';
+$file = 'project';
+include 'layout.php';
 ?>

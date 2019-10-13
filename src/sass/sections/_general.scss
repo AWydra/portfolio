@@ -94,7 +94,7 @@ hr {
   &::before {
     @include pseudo(block, absolute);
     background-color: $secondaryColor;
-    width: 10px;
+    width: 7px;
     height: 100%;
     top: 4%;
 
