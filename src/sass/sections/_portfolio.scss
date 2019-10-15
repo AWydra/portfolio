@@ -42,7 +42,7 @@
   &__img {
     width: 100%;
     display: block;
-    transition: $portfolioTransition;
+    transition: $transition;
   }
 
   &__figcap {
@@ -63,6 +63,6 @@
     margin: 1rem auto 0;
     padding-bottom: $figcapSpacing;
     border-top-width: 3px;
-    transition: $portfolioTransition;
+    transition: $transition;
   }
 }

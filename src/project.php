@@ -8,7 +8,7 @@
     <div class="project__wrap">
       <section class="project__desc-column">
         <article class="project__desc">
-          <header class="title project__desc-title">
+          <header class="title title--project">
             <div class="title__holder">
               <h3 class="title__holder--heading">Opis</h3>
             </div>
@@ -20,7 +20,7 @@
       </section>
       <section class="project__details-column">
         <article class="project__details">
-          <header class="title project__desc-title">
+          <header class="title title--project">
             <div class="title__holder">
               <h3 class="title__holder--heading">Szczegóły</h3>
             </div>
@@ -28,7 +28,7 @@
           <p class="project__details-content"><?= var_dump($details) ?></p>
         </article>
         <article class="project__technologies">
-          <header class="title project__desc-title">
+          <header class="title title--project">
             <div class="title__holder">
               <h3 class="title__holder--heading">Szczegóły</h3>
             </div>
