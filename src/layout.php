@@ -16,7 +16,7 @@
     <aside class="navigation">
       <section class="navigation__logo">
         <a href="//<?= $_SERVER["SERVER_NAME"] ?>" class="navigation__logo-href">
-          <img class="navigation__logo-image" src="//<?= $_SERVER["SERVER_NAME"] ?>/img/logo.png" alt="My logo" />
+          <img class="navigation__logo-image" src="//<?= $_SERVER["SERVER_NAME"] ?>/img/logo.svg" alt="My logo" />
           <p class="navigation__logo-desc">Arkadiusz Wydra</p>
         </a>
       </section>
