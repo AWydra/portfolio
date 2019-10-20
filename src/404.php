@@ -2,8 +2,8 @@
   <section class="error404__container">
     <header class="title title--error404">
       <div class="title__holder">
-        <h1 class="title__holder--heading">A co tu się dzieje??</h1>
-        <p class="title__holder--subtitle">
+        <h1 class="title__content">A co tu się dzieje??</h1>
+        <p class="title__subtitle">
           404 Strona nie znaleziona
         </p>
       </div>

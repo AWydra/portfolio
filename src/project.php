@@ -2,38 +2,43 @@
   <section id="project" class="project page__section">
     <header class="title">
       <div class="title__holder">
-        <h2 class="title__holder--heading"><?= $heading ?></h2>
+        <h2 class="title__content"><?= $heading ?></h2>
       </div>
     </header>
     <div class="project__wrap">
-      <section class="project__desc-column">
-        <article class="project__desc">
+      <section class="project__column project__column--desc">
+        <article class="description">
           <header class="title title--project">
             <div class="title__holder">
-              <h3 class="title__holder--heading">Opis</h3>
+              <h3 class="title__content">Opis</h3>
             </div>
           </header>
-          <p class="project__desc-content"><?= var_dump($details) ?></p>
+          <p class="description__content">
+            <?= var_dump($desc) ?>
+          </p>
         </article>
-
-        <section class="project__gallery"></section>
+        <article class="gallery">
+          <?= var_dump($images) ?>
+        </article>
       </section>
-      <section class="project__details-column">
-        <article class="project__details">
+      <section class="project__column project__column--details">
+        <article class="details">
           <header class="title title--project">
             <div class="title__holder">
-              <h3 class="title__holder--heading">Szczegóły</h3>
+              <h3 class="title__content">Szczegóły</h3>
             </div>
           </header>
-          <p class="project__details-content"><?= var_dump($details) ?></p>
+          <p class="details__content">
+            <?= var_dump($details) ?>
+          </p>
         </article>
-        <article class="project__technologies">
+        <article class="technologies">
           <header class="title title--project">
             <div class="title__holder">
-              <h3 class="title__holder--heading">Szczegóły</h3>
+              <h3 class="title__content">Technologie</h3>
             </div>
           </header>
-          <p class="project__technologies-content">
+          <p class="technologies__content">
             <?= var_dump($technologies) ?>
           </p>
         </article>

@@ -107,20 +107,20 @@ hr {
     height: 100%;
     margin-left: 20px;
     @include flex(space-between, flex-start, column);
+  }
 
-    &--heading {
-      margin: 0;
-      font-size: $sectionTitle;
-      text-transform: uppercase;
-    }
+  &__content {
+    margin: 0;
+    font-size: $sectionTitle;
+    text-transform: uppercase;
+  }
 
-    &--subtitle {
-      margin: 0;
-      font-size: $sectionSubtitle;
+  &__subtitle {
+    margin: 0;
+    font-size: $sectionSubtitle;
 
-      @include mq($sm) {
-        font-size: $sectionSubtitle * 1.25;
-      }
+    @include mq($sm) {
+      font-size: $sectionSubtitle * 1.25;
     }
   }
 

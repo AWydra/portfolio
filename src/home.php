@@ -5,7 +5,7 @@
       Arkadiusz <span class="intro__surname">Wydra</span>
     </h1>
     <p class="intro__subtitle">
-      Junior <span class="intro--bold">Front-end Developer</span>
+      Junior <span class="intro__subtitle intro__subtitle--bold">Front-end Developer</span>
     </p>
   </section>
   <button class="intro__arrow">
@@ -18,8 +18,8 @@
   <section id="about" class="about page__section">
     <header class="title">
       <div class="title__holder">
-        <h2 class="title__holder--heading">o mnie</h2>
-        <p class="title__holder--subtitle">
+        <h2 class="title__content">o mnie</h2>
+        <p class="title__subtitle">
           Najważniejsze informacje o mojej osobie
         </p>
       </div>
@@ -63,8 +63,8 @@
   <section id="skills" class="skills page__section">
     <header class="title">
       <div class="title__holder">
-        <h2 class="title__holder--heading">umiejętności</h2>
-        <p class="title__holder--subtitle">
+        <h2 class="title__content">umiejętności</h2>
+        <p class="title__subtitle">
           Zobacz z czym na co dzień pracuję
         </p>
       </div>
@@ -204,8 +204,8 @@
   <section id="portfolio" class="portfolio page__section">
     <header class="title">
       <div class="title__holder">
-        <h2 class="title__holder--heading">portfolio</h2>
-        <p class="title__holder--subtitle">
+        <h2 class="title__content">portfolio</h2>
+        <p class="title__subtitle">
           Sprawdź moje ostatnie projekty
         </p>
       </div>
@@ -324,8 +324,8 @@
   <section id="contact" class="contact page__section">
     <header class="title">
       <div class="title__holder">
-        <h2 class="title__holder--heading">kontakt</h2>
-        <p class="title__holder--subtitle">
+        <h2 class="title__content">kontakt</h2>
+        <p class="title__subtitle">
           Masz pytanie? Napisz do mnie
         </p>
       </div>
