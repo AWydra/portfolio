@@ -16,6 +16,7 @@
   &__logo {
     height: $logoHeight;
     border-bottom: lighten($mainColor, 10) solid 1px;
+    fill: #ffffff;
     @include flex(center, center, column);
 
     &-href {
@@ -26,6 +27,7 @@
 
       &:hover {
         color: $secondaryColor;
+        fill: $secondaryColor;
       }
     }
 

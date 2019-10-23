@@ -16,8 +16,10 @@
     <aside class="navigation">
       <section class="navigation__logo">
         <a href="//<?= $_SERVER["SERVER_NAME"] ?>" class="navigation__logo-href">
-          <img class="navigation__logo-image" src="//<?= $_SERVER["SERVER_NAME"] ?>/img/logo.svg" alt="My logo" />
-          <p class="navigation__logo-desc">Arkadiusz Wydra</p>
+          <svg class="navigation__logo-image">
+            <use xlink:href="//<?= $_SERVER["SERVER_NAME"] ?>/img/logo.svg#site-logo"></use>
+          </svg>
+          <p class=" navigation__logo-desc">Arkadiusz Wydra</p>
         </a>
       </section>
       <button class="navigation__hamburger">
@@ -27,22 +29,22 @@
         <nav class="navigation__nav">
           <ul class="navigation__list">
             <li class="navigation__item">
-              <a href="#intro" class="navigation__link">start</a>
+              <a href="//<?= $_SERVER["SERVER_NAME"] ?>/#intro" class="navigation__link">start</a>
             </li>
             <li class="navigation__item">
-              <a href="#about" class="navigation__link">o mnie</a>
+              <a href="//<?= $_SERVER["SERVER_NAME"] ?>/#about" class="navigation__link">o mnie</a>
             </li>
             <li class="navigation__item">
-              <a href="#skills" class="navigation__link">umiejętności</a>
+              <a href="//<?= $_SERVER["SERVER_NAME"] ?>/#skills" class="navigation__link">umiejętności</a>
             </li>
             <li class="navigation__item">
-              <a href="#portfolio" class="navigation__link">portfolio</a>
+              <a href="//<?= $_SERVER["SERVER_NAME"] ?>/#portfolio" class="navigation__link">portfolio</a>
             </li>
             <li class="navigation__item">
-              <a href="#testimonials" class="navigation__link">referencje</a>
+              <a href="//<?= $_SERVER["SERVER_NAME"] ?>/#testimonials" class="navigation__link">referencje</a>
             </li>
             <li class="navigation__item">
-              <a href="#contact" class="navigation__link">kontakt</a>
+              <a href="//<?= $_SERVER["SERVER_NAME"] ?>/#contact" class="navigation__link">kontakt</a>
             </li>
           </ul>
         </nav>
