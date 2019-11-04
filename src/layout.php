@@ -53,21 +53,21 @@
             <li class="navigation-icon__item">
               <a href="//fb.me/wydramord" class="navigation-icon__link">
                 <svg class="icon">
-                  <use xlink:href="img/svg/icons.svg#icon-facebook"></use>
+                  <use xlink:href="//<?= $_SERVER["SERVER_NAME"] ?>/img/svg/icons.svg#icon-facebook"></use>
                 </svg>
               </a>
             </li>
             <li class="navigation-icon__item">
               <a href="//linkedin.com/in/awydra" class="navigation-icon__link">
                 <svg class="icon">
-                  <use xlink:href="img/svg/icons.svg#icon-linkedin"></use>
+                  <use xlink:href="//<?= $_SERVER["SERVER_NAME"] ?>/img/svg/icons.svg#icon-linkedin"></use>
                 </svg>
               </a>
             </li>
             <li class="navigation-icon__item">
               <a href="//github.com/AWydra" class="navigation-icon__link">
                 <svg class="icon">
-                  <use xlink:href="img/svg/icons.svg#icon-github"></use>
+                  <use xlink:href="//<?= $_SERVER["SERVER_NAME"] ?>/img/svg/icons.svg#icon-github"></use>
                 </svg>
               </a>
             </li>
@@ -78,7 +78,7 @@
     <div class="container">
       <?php include($page) ?>
       <footer class="copyrights">
-        Copyright &copy; 2019 Arkadiusz Wydra
+        Copyright &copy; <?= date("Y") ?> Arkadiusz Wydra
       </footer>
     </div>
   </div>

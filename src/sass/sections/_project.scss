@@ -1,0 +1,21 @@
+.project {
+  min-height: calc(100vh - 78px);
+
+  &__wrap {
+    display: flex;
+  }
+  &__column {
+    @include flex(flex-start, flex-start, column);
+
+    &--desc {
+      max-width: $descColumnWidth;
+      flex: 0 0 $descColumnWidth;
+      padding-right: 4em;
+    }
+
+    &--details {
+      max-width: $detailsColumnWidth;
+      flex: 0 0 $detailsColumnWidth;
+    }
+  }
+}
