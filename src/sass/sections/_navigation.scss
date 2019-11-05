@@ -16,7 +16,7 @@
   &__logo {
     height: $logoHeight;
     border-bottom: lighten($mainColor, 10) solid 1px;
-    fill: #ffffff;
+    $parent: &;
     @include flex(center, center, column);
 
     &-href {
@@ -27,14 +27,19 @@
 
       &:hover {
         color: $secondaryColor;
-        fill: $secondaryColor;
+
+        #{$parent}-image {
+          fill: $secondaryColor;
+        }
       }
     }
 
     &-image {
       width: 50%;
-      height: 70%;
+      height: 50%;
       display: block;
+      fill: #ffffff;
+      transition: $transition;
 
       @include mq(1299px) {
         width: 60px;
@@ -44,7 +49,7 @@
     }
 
     &-desc {
-      margin: 0;
+      margin: 1em 0 0;
       font-size: 1.2rem;
       text-transform: uppercase;
       font-weight: 600;
