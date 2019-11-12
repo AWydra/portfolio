@@ -38,9 +38,11 @@
               <h3 class="title__content">Technologie</h3>
             </div>
           </header>
-          <p class="technologies__content">
-            <?= var_dump($technologies) ?>
-          </p>
+          <ul class="technologies__list">
+            <?php foreach($technologies as $technology): ?>
+            <li class="technologies__item"><?= $technology ?></li>
+            <?php endforeach ?>
+          </ul>
         </article>
       </section>
     </div>
