@@ -28,9 +28,16 @@
               <h3 class="title__content">Szczegóły</h3>
             </div>
           </header>
-          <p class="details__content">
-            <?= var_dump($details) ?>
-          </p>
+          <ul class="details__list">
+            <?php foreach($details as $detail): ?>
+            <li class="details__item">
+              <svg class="icon icon--project">
+                <use xlink:href="//<?= $_SERVER['SERVER_NAME'] ?>/img/svg/icons.svg#<?= $detail['icon'] ?>"></use>
+              </svg>
+              <?= $detail['content'] ?>
+            </li>
+            <?php endforeach ?>
+          </ul>
         </article>
         <article class="technologies">
           <header class="title title--project">
