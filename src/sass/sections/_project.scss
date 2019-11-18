@@ -41,3 +41,34 @@
     font-size: 1.1em;
   }
 }
+
+.details {
+  width: 100%;
+  display: block;
+
+  &__list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  &__item {
+    @include flex(flex-start);
+
+    &-content {
+      margin-left: 0.75em;
+      display: inline-block;
+      font-size: 1.125em;
+    }
+  }
+
+  &--link {
+    color: $secondaryColor;
+    text-decoration: none;
+
+    &:hover,
+    &:focus {
+      color: darken($secondaryColor, 5);
+    }
+  }
+}

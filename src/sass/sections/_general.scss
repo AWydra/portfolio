@@ -43,6 +43,10 @@ hr {
       height: $skillsIcons - ($skillsIcons * 0.2);
     }
   }
+
+  &--project {
+    fill: $secondaryColor;
+  }
 }
 
 .container {
