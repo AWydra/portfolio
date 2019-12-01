@@ -5,18 +5,23 @@
     display: flex;
   }
   &__column {
+    padding: 0 1em;
     @include flex(flex-start, flex-start, column);
 
     &--desc {
       max-width: $descColumnWidth;
       flex: 0 0 $descColumnWidth;
-      padding-right: 4em;
     }
 
     &--details {
       max-width: $detailsColumnWidth;
       flex: 0 0 $detailsColumnWidth;
     }
+  }
+
+  &__sticky {
+    position: sticky;
+    top: 3em;
   }
 }
 
@@ -44,6 +49,7 @@
 
 .details {
   width: 100%;
+  margin-bottom: 30px;
   display: block;
 
   &__list {
@@ -53,10 +59,12 @@
   }
 
   &__item {
+    padding: 0.25em 0;
+    font-weight: 500;
     @include flex(flex-start);
 
     &-content {
-      margin-left: 0.75em;
+      margin: 0 0 0 0.75em;
       display: inline-block;
       font-size: 1.125em;
     }
@@ -69,6 +77,7 @@
     &:hover,
     &:focus {
       color: darken($secondaryColor, 5);
+      text-decoration: underline;
     }
   }
 }

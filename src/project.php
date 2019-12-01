@@ -22,35 +22,38 @@
         </article>
       </section>
       <section class="project__column project__column--details">
-        <article class="details">
-          <header class="title title--project">
-            <div class="title__holder">
-              <h3 class="title__content">Szczegóły</h3>
-            </div>
-          </header>
-          <ul class="details__list">
-            <?php foreach($details as $detail): ?>
-            <li class="details__item">
-              <svg class="icon icon--project">
-                <use xlink:href="//<?= $_SERVER['SERVER_NAME'] ?>/img/svg/icons.svg#<?= $detail['icon'] ?>"></use>
-              </svg>
-              <?= $detail['content'] ?>
-            </li>
-            <?php endforeach ?>
-          </ul>
-        </article>
-        <article class="technologies">
-          <header class="title title--project">
-            <div class="title__holder">
-              <h3 class="title__content">Technologie</h3>
-            </div>
-          </header>
-          <ul class="technologies__list">
-            <?php foreach($technologies as $technology): ?>
-            <li class="technologies__item"><?= $technology ?></li>
-            <?php endforeach ?>
-          </ul>
-        </article>
+        <div class="project__sticky">
+          <article class="details">
+            <header class="title title--project">
+              <div class="title__holder">
+                <h3 class="title__content">Szczegóły</h3>
+              </div>
+            </header>
+            <ul class="details__list">
+              <?php foreach($details as $detail): ?>
+              <li class="details__item">
+                <svg class="icon icon--project">
+                  <use xlink:href="//<?= $_SERVER['SERVER_NAME'] ?>/img/svg/icons.svg#<?= $detail['icon'] ?>"></use>
+                </svg>
+                <?= $detail['content'] ?>
+              </li>
+              <?php endforeach ?>
+            </ul>
+          </article>
+          <article class="technologies">
+            <header class="title title--project">
+              <div class="title__holder">
+                <h3 class="title__content">Technologie</h3>
+              </div>
+            </header>
+            <ul class="technologies__list">
+              <?php foreach($technologies as $technology): ?>
+              <li class="technologies__item"><?= $technology ?></li>
+              <?php endforeach ?>
+            </ul>
+          </article>
+        </div>
+
       </section>
     </div>
   </section>
