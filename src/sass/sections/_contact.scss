@@ -1,7 +1,7 @@
 .contact {
   &__container {
     display: grid;
-    grid-template-columns: 300px 1fr;
+    grid-template-columns: auto 1fr;
     grid-gap: 1.5rem;
 
     @include mq($md) {
@@ -18,7 +18,8 @@
       width: 100%;
       background-color: $contactBg;
       border: $contactBorder;
-      padding: 20px 15px 14px 65px;
+      padding: 20px #{$iconContact * 1.5} #{$iconContact/2} #{2 * $iconContact +
+        $iconContact / 5};
       position: relative;
       @include flex(center, flex-start, column);
 

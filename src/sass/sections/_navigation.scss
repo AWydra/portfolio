@@ -9,7 +9,7 @@
   color: $fontColor;
   overflow-y: overlay;
 
-  @include mq(1299px) {
+  @include mq($lg) {
     overflow-y: visible;
   }
 
@@ -41,7 +41,7 @@
       fill: #ffffff;
       transition: $transition;
 
-      @include mq(1299px) {
+      @include mq($lg) {
         width: 60px;
         height: 35px;
         margin-left: 20px;
@@ -55,12 +55,12 @@
       font-weight: 600;
       letter-spacing: 0.1rem;
 
-      @include mq(1299px) {
+      @include mq($lg) {
         display: none;
       }
     }
 
-    @include mq(1299px) {
+    @include mq($lg) {
       height: auto;
       border: none;
     }
@@ -70,7 +70,7 @@
     height: calc(100% - #{$logoHeight});
     @include flex(space-between, center, column);
 
-    @include mq(1299px) {
+    @include mq($lg) {
       width: 100%;
       height: auto;
       display: none;
@@ -95,7 +95,7 @@
     width: 80%;
     padding: 0;
 
-    @include mq(1299px) {
+    @include mq($lg) {
       width: 100%;
       margin: 5px 0;
       padding-left: 5%;
@@ -141,7 +141,7 @@
     width: 80%;
     margin-bottom: 20px;
 
-    @include mq(1299px) {
+    @include mq($lg) {
       margin-bottom: 5px;
     }
 
@@ -214,7 +214,7 @@
       }
     }
 
-    @include mq(1299px) {
+    @include mq($lg) {
       display: block;
     }
   }
@@ -223,7 +223,7 @@
     width: 270px;
   }
 
-  @include mq(1299px) {
+  @include mq($lg) {
     width: 100%;
     height: 55px;
     position: fixed;

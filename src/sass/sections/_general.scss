@@ -56,7 +56,7 @@ hr {
     margin-left: 270px;
   }
 
-  @include mq(1299px) {
+  @include mq($lg) {
     margin-left: 0;
   }
 }

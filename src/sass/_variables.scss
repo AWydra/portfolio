@@ -28,8 +28,9 @@ $logoHeight: 250px;
 $hamburgerItemHeight: 3px;
 
 //About
-$aboutInfoWidth: 70%;
-$aboutInfoMinWidth: 550px;
+$aboutInfoWidth: 85%;
+$aboutInfoMinWidth: unset;
+$aboutInfoMaxWidth: 600px;
 $aboutSpaceBetweenHr: 30px;
 
 //Skills
@@ -39,7 +40,7 @@ $skillsIcons: 55px;
 $figcapSpacing: 2rem;
 
 //Testimonials
-$arrowPosition: -90px;
+$arrowPosition: -60px;
 $paginationPosition: -50px;
 
 //Contact

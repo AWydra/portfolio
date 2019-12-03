@@ -163,11 +163,21 @@
 }
 
 .controls .prev {
-  left: $arrowPosition;
+  left: ($arrowPosition + $arrowPosition / 2);
+
+  @include mq($xl) {
+    left: $arrowPosition;
+    padding: 0;
+  }
 }
 
 .controls .next {
-  right: $arrowPosition;
+  right: ($arrowPosition + $arrowPosition / 2);
+
+  @include mq($xl) {
+    right: $arrowPosition;
+    padding: 0;
+  }
 }
 
 .controls li:hover,

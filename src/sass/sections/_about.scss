@@ -100,6 +100,7 @@
   &__info {
     width: $aboutInfoWidth;
     min-width: $aboutInfoMinWidth;
+    max-width: $aboutInfoMaxWidth;
     margin: $aboutSpaceBetweenHr 0;
     padding: 0;
     font-family: $secondaryFont;
@@ -131,6 +132,7 @@
   &__line {
     width: $aboutInfoWidth;
     min-width: $aboutInfoMinWidth;
+    max-width: $aboutInfoMaxWidth;
     margin-right: 100%;
 
     @include mq(1080px) {
