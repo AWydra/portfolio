@@ -361,13 +361,15 @@
       <article class="contact__form-container">
         <h4 class="contact__heading">Przywitaj się :)</h4>
         <form action="mail.php" class="contact__form">
-          <div class="contact__input-container">
-            <input class="contact__input" type="text" name="name" placeholder="Imię" />
-            <div class="contact__underscore"></div>
-          </div>
-          <div class="contact__input-container">
-            <input class="contact__input" type="email" name="email" placeholder="Email" />
-            <div class="contact__underscore"></div>
+          <div class="contact__inputs">
+            <div class="contact__input-container">
+              <input class="contact__input" type="text" name="name" placeholder="Imię" />
+              <div class="contact__underscore"></div>
+            </div>
+            <div class="contact__input-container">
+              <input class="contact__input" type="email" name="email" placeholder="Email" />
+              <div class="contact__underscore"></div>
+            </div>
           </div>
           <div class="contact__textarea-container">
             <textarea class="contact__textarea" name="message" placeholder="Treść wiadomości"></textarea>

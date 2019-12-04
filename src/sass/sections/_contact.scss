@@ -18,8 +18,8 @@
       width: 100%;
       background-color: $contactBg;
       border: $contactBorder;
-      padding: 20px #{$iconContact * 1.5} #{$iconContact/2} #{2 * $iconContact +
-        $iconContact / 5};
+      padding: 20px $iconContact #{$iconContact/2} #{2 * $iconContact + $iconContact /
+        5};
       position: relative;
       @include flex(center, flex-start, column);
 
@@ -81,8 +81,15 @@
 
   &__form {
     height: calc(100% - 42px);
-    @include flex(space-between, flex-start);
-    flex-wrap: wrap;
+    @include flex(flex-start, flex-start, column);
+  }
+
+  &__inputs {
+    width: 100%;
+    @include flex();
+    @include mq($sm) {
+      flex-direction: column;
+    }
   }
 
   &__input-container {
@@ -130,7 +137,7 @@
 
     &-container {
       width: 100%;
-      height: 60%;
+      flex: 1;
       margin: 15px 0;
     }
 

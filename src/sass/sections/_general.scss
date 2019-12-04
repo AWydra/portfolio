@@ -100,11 +100,6 @@ hr {
     background-color: $secondaryColor;
     width: 7px;
     height: 100%;
-    top: 4%;
-
-    @include mq($md) {
-      width: 7px;
-    }
   }
 
   &__holder {
@@ -121,6 +116,7 @@ hr {
 
   &__subtitle {
     margin: 0;
+    padding-bottom: 2%;
     font-size: $sectionSubtitle;
 
     @include mq($sm) {
