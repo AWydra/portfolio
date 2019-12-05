@@ -14,7 +14,7 @@
             </div>
           </header>
           <p class="description__content">
-            <?= var_dump($desc) ?>
+            <?= $desc ?>
           </p>
         </article>
         <article class="gallery">
