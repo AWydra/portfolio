@@ -22,6 +22,7 @@
     "gulp-babel": "^7.0.1",
     "gulp-clean-css": "^3.9.4",
     "gulp-connect-php": "^1.0.3",
+    "gulp-images-resizer": "^0.0.7",
     "gulp-include": "^2.4.1",
     "gulp-sass": "^4.0.1",
     "gulp-tinypng-unlimited": "^1.0.3",
