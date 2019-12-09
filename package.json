@@ -24,6 +24,7 @@
     "gulp-connect-php": "^1.0.3",
     "gulp-images-resizer": "^0.0.7",
     "gulp-include": "^2.4.1",
+    "gulp-rename": "^2.0.0",
     "gulp-sass": "^4.0.1",
     "gulp-tinypng-unlimited": "^1.0.3",
     "gulp-uglify": "^3.0.0"
