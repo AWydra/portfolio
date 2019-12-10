@@ -9,6 +9,8 @@ import del from "del";
 import tinypng from "gulp-tinypng-unlimited";
 import connect from "gulp-connect-php";
 import include from "gulp-include";
+import resize from "gulp-images-resizer";
+import rename from "gulp-rename";
 
 const sync = browserSync.create();
 const reload = sync.reload;
@@ -17,6 +19,7 @@ const config = {
     src: {
       php: "./src/**/*.php",
       img: "./src/img/**/*.*",
+      imgProject: "./src/img/project/**/*.*",
       sass: [
         "./src/sass/style.scss",
         "./src/sass/home.scss",
@@ -29,7 +32,8 @@ const config = {
       main: "./dist",
       css: "./dist/css",
       js: "./dist/js",
-      img: "./dist/img"
+      img: "./dist/img",
+      imgProject: "./dist/img/project"
     }
   }
 };
@@ -90,12 +94,34 @@ gulp.task(
 
 gulp.task(
   "images",
-  gulp.series(function moveImages() {
-    return gulp
-      .src(config.paths.src.img)
-      .pipe(tinypng())
-      .pipe(gulp.dest(config.paths.dist.img));
-  }, refresh)
+  gulp.series(
+    function moveImages() {
+      return gulp
+        .src(config.paths.src.img)
+        .pipe(tinypng())
+        .pipe(gulp.dest(config.paths.dist.img));
+    },
+    function moveProjectImages() {
+      return gulp
+        .src(config.paths.src.imgProject)
+        .pipe(
+          resize({
+            width: 100
+          })
+        )
+        .pipe(
+          rename(function(path) {
+            return {
+              dirname: path.dirname,
+              basename: path.basename + "-min",
+              extname: path.extname
+            };
+          })
+        )
+        .pipe(gulp.dest(config.paths.dist.imgProject));
+    },
+    refresh
+  )
 );
 
 gulp.task("clean", () => {
