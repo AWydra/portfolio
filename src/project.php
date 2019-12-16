@@ -18,7 +18,54 @@
           </p>
         </article>
         <article class="gallery">
-          <?= var_dump($images) ?>
+          <figure class="gallery__figure">
+            <a
+              class="gallery__href"
+              href="https://via.placeholder.com/450x300.jpg"
+            >
+              <img
+                class="gallery__image"
+                src="https://via.placeholder.com/450x300.jpg"
+                alt=""
+              />
+            </a>
+          </figure>
+          <figure class="gallery__figure">
+            <a
+              class="gallery__href"
+              href="https://via.placeholder.com/450x300.jpg"
+            >
+              <img
+                class="gallery__image"
+                src="https://via.placeholder.com/450x300.jpg"
+                alt=""
+              />
+            </a>
+          </figure>
+          <figure class="gallery__figure">
+            <a
+              class="gallery__href"
+              href="https://via.placeholder.com/450x300.jpg"
+            >
+              <img
+                class="gallery__image"
+                src="https://via.placeholder.com/450x300.jpg"
+                alt=""
+              />
+            </a>
+          </figure>
+          <figure class="gallery__figure">
+            <a
+              class="gallery__href"
+              href="https://via.placeholder.com/450x300.jpg"
+            >
+              <img
+                class="gallery__image"
+                src="https://via.placeholder.com/450x300.jpg"
+                alt=""
+              />
+            </a>
+          </figure>
         </article>
       </section>
       <section class="project__column project__column--details">
@@ -33,7 +80,9 @@
               <?php foreach($details as $detail): ?>
               <li class="details__item">
                 <svg class="icon icon--project">
-                  <use xlink:href="//<?= $_SERVER['SERVER_NAME'] ?>/img/svg/icons.svg#<?= $detail['icon'] ?>"></use>
+                  <use
+                    xlink:href="//<?= $_SERVER['SERVER_NAME'] ?>/img/svg/icons.svg#<?= $detail['icon'] ?>"
+                  ></use>
                 </svg>
                 <?= $detail['content'] ?>
               </li>
@@ -53,7 +102,6 @@
             </ul>
           </article>
         </div>
-
       </section>
     </div>
   </section>

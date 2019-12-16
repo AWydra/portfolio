@@ -14,7 +14,7 @@
   } else if (typeof exports === "object") {
     module.exports = factory();
   } else {
-    root.baguetteBox = factory();
+    window.baguetteBox = factory();
   }
 })(this, function() {
   "use strict";
