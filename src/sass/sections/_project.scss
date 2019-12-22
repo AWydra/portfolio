@@ -91,7 +91,18 @@
 }
 
 .gallery {
+  width: 100%;
+  margin-top: 2em;
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 1em;
+
+  &__figure {
+    margin: 0;
+  }
+
+  &__image {
+    max-width: 100%;
+    display: inline-block;
+  }
 }
