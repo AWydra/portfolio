@@ -1,3 +1,11 @@
+<?php
+  function isLink($arr) {
+    $result = array_key_exists('href', $arr) ? true : false;
+
+    return $result;
+  }
+?>
+
 <main class="page">
   <section id="project" class="project page__section">
     <header class="title">
@@ -19,51 +27,23 @@
         </article>
         <article class="gallery">
           <figure class="gallery__figure">
-            <a
-              class="gallery__href"
-              href="https://via.placeholder.com/450x300.jpg"
-            >
-              <img
-                class="gallery__image"
-                src="https://via.placeholder.com/450x300.jpg"
-                alt=""
-              />
+            <a class="gallery__href" href="https://via.placeholder.com/450x300.jpg">
+              <img class="gallery__image" src="https://via.placeholder.com/450x300.jpg" alt="" />
             </a>
           </figure>
           <figure class="gallery__figure">
-            <a
-              class="gallery__href"
-              href="https://via.placeholder.com/450x300.jpg"
-            >
-              <img
-                class="gallery__image"
-                src="https://via.placeholder.com/450x300.jpg"
-                alt=""
-              />
+            <a class="gallery__href" href="https://via.placeholder.com/450x300.jpg">
+              <img class="gallery__image" src="https://via.placeholder.com/450x300.jpg" alt="" />
             </a>
           </figure>
           <figure class="gallery__figure">
-            <a
-              class="gallery__href"
-              href="https://via.placeholder.com/450x300.jpg"
-            >
-              <img
-                class="gallery__image"
-                src="https://via.placeholder.com/450x300.jpg"
-                alt=""
-              />
+            <a class="gallery__href" href="https://via.placeholder.com/450x300.jpg">
+              <img class="gallery__image" src="https://via.placeholder.com/450x300.jpg" alt="" />
             </a>
           </figure>
           <figure class="gallery__figure">
-            <a
-              class="gallery__href"
-              href="https://via.placeholder.com/450x300.jpg"
-            >
-              <img
-                class="gallery__image"
-                src="https://via.placeholder.com/450x300.jpg"
-                alt=""
-              />
+            <a class="gallery__href" href="https://via.placeholder.com/450x300.jpg">
+              <img class="gallery__image" src="https://via.placeholder.com/450x300.jpg" alt="" />
             </a>
           </figure>
         </article>
@@ -79,12 +59,12 @@
             <ul class="details__list">
               <?php foreach($details as $detail): ?>
               <li class="details__item">
+                <?= isLink($detail) ? "<a href=\"".$detail["href"]."\" class=\"details__item-content details--link\">" : "<p class=\"details__item-content\">" ?>
                 <svg class="icon icon--project">
-                  <use
-                    xlink:href="//<?= $_SERVER['SERVER_NAME'] ?>/img/svg/icons.svg#<?= $detail['icon'] ?>"
-                  ></use>
+                  <use xlink:href="//<?= $_SERVER['SERVER_NAME'] ?>/img/svg/icons.svg#<?= $detail['icon'] ?>"></use>
                 </svg>
                 <?= $detail['content'] ?>
+                <?= isLink($detail) ? "</a>" : "</p>"; ?>
               </li>
               <?php endforeach ?>
             </ul>
