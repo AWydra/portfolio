@@ -8,7 +8,7 @@
 
 <main class="page">
   <section id="project" class="project page__section">
-    <header class="title">
+    <header class="title title--no-decoration">
       <div class="title__holder">
         <h2 class="title__content"><?= $heading ?></h2>
       </div>

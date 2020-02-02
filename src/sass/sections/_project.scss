@@ -1,32 +1,86 @@
 .project {
   min-height: calc(100vh - 78px);
 
+  @include mq($xxl) {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+
+  @include mq($lg) {
+    margin-top: $navbarHeight;
+  }
+
   &__wrap {
     display: flex;
+
+    @include mq($xl) {
+      flex-direction: column;
+      align-items: center;
+    }
   }
   &__column {
     padding: 0 1em;
     @include flex(flex-start, flex-start, column);
 
+    &:first-child {
+      padding-left: 0;
+    }
+
+    &:last-child {
+      padding-right: 0;
+    }
+
+    @include mq($xl) {
+      padding: 0;
+    }
+
     &--desc {
       max-width: $descColumnWidth;
       flex: 0 0 $descColumnWidth;
+
+      @include mq($xl) {
+        width: 100%;
+        max-width: unset;
+        order: 1;
+      }
     }
 
     &--details {
       max-width: $detailsColumnWidth;
       flex: 0 0 $detailsColumnWidth;
+
+      @include mq($xl) {
+        width: 100%;
+        max-width: unset;
+      }
     }
   }
 
   &__sticky {
     position: sticky;
     top: 3em;
+
+    @include mq($xl) {
+      width: 100%;
+      display: flex;
+    }
+
+    @include mq($sm) {
+      flex-direction: column;
+    }
   }
 }
 
 .technologies {
   width: 100%;
+
+  @include mq($xl) {
+    flex-grow: 1;
+  }
+
+  @include mq($sm) {
+    margin-bottom: 30px;
+  }
 
   &__list {
     margin: 0;
@@ -51,6 +105,10 @@
   width: 100%;
   margin-bottom: 30px;
   display: block;
+
+  @include mq($xl) {
+    flex-grow: 1;
+  }
 
   &__list {
     margin: 0;
@@ -97,12 +155,21 @@
   grid-template-columns: 1fr 1fr;
   gap: 1em;
 
+  @include mq($sm) {
+    grid-template-columns: 1fr;
+  }
+
   &__figure {
     margin: 0;
   }
 
+  &__href {
+    overflow: hidden;
+    @include aspect-ratio("gallery__image", 15, 10);
+  }
+
   &__image {
-    max-width: 100%;
+    width: 100%;
     display: inline-block;
   }
 }

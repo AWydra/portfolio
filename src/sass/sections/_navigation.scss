@@ -225,7 +225,7 @@
 
   @include mq($lg) {
     width: 100%;
-    height: 55px;
+    height: $navbarHeight;
     position: fixed;
     z-index: 99;
 

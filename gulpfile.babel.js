@@ -106,7 +106,7 @@ gulp.task(
         .src(config.paths.src.imgProject)
         .pipe(
           resize({
-            width: 100
+            height: 300
           })
         )
         .pipe(
