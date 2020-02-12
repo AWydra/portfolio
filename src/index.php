@@ -49,7 +49,6 @@ if(!$data) {
 $heading = $data['heading'];
 $details = unserialize($data['details']);
 $desc = $data['description'];
-$images = unserialize($data['images']);
 $code = $data['code'];
 $live = $data['live'];
 $technologies = unserialize($data['technologies']);

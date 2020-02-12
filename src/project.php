@@ -1,4 +1,8 @@
 <?php
+
+  $fi = new FilesystemIterator("./img/project/$slug");
+  $images = iterator_count($fi) / 2;
+
   function isLink($arr) {
     $result = array_key_exists('href', $arr) ? true : false;
 
@@ -26,26 +30,17 @@
           </p>
         </article>
         <article class="gallery">
+          <?php
+            for ($i = 1; $i <= $images; $i++):
+          ?>
           <figure class="gallery__figure">
-            <a class="gallery__href" href="https://via.placeholder.com/450x300.jpg">
-              <img class="gallery__image" src="https://via.placeholder.com/450x300.jpg" alt="" />
+            <a class="gallery__href" href="//<?= $_SERVER["SERVER_NAME"] ?>/img/project/<?= $slug ?>/<?= $i ?>.jpg">
+              <img class="gallery__image"
+                src="//<?= $_SERVER["SERVER_NAME"] ?>/img/project/<?= $slug ?>/<?=$i?>.min.jpg"
+                alt="Gallery item <?= $i ?>" />
             </a>
           </figure>
-          <figure class="gallery__figure">
-            <a class="gallery__href" href="https://via.placeholder.com/450x300.jpg">
-              <img class="gallery__image" src="https://via.placeholder.com/450x300.jpg" alt="" />
-            </a>
-          </figure>
-          <figure class="gallery__figure">
-            <a class="gallery__href" href="https://via.placeholder.com/450x300.jpg">
-              <img class="gallery__image" src="https://via.placeholder.com/450x300.jpg" alt="" />
-            </a>
-          </figure>
-          <figure class="gallery__figure">
-            <a class="gallery__href" href="https://via.placeholder.com/450x300.jpg">
-              <img class="gallery__image" src="https://via.placeholder.com/450x300.jpg" alt="" />
-            </a>
-          </figure>
+          <?php endfor; ?>
         </article>
       </section>
       <section class="project__column project__column--details">

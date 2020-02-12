@@ -113,7 +113,7 @@ gulp.task(
           rename(function(path) {
             return {
               dirname: path.dirname,
-              basename: path.basename + "-min",
+              basename: path.basename + ".min",
               extname: path.extname
             };
           })
