@@ -118,6 +118,7 @@ hr {
     margin: 0;
     padding-bottom: 2%;
     font-size: $sectionSubtitle;
+    font-weight: 500;
 
     @include mq($sm) {
       font-size: $sectionSubtitle * 1.25;

@@ -1,38 +1,63 @@
 .skills {
   &__container {
-    @extend %grid-rwd;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-gap: 3rem;
+
+    @include mq(1400px) {
+      grid-template-columns: repeat(4, 1fr);
+    }
+
+    @include mq($xl) {
+      grid-template-columns: repeat(3, 1fr);
+      grid-gap: 2rem;
+    }
+
+    @include mq($md) {
+      grid-template-columns: repeat(2, 1fr);
+      grid-gap: 1rem;
+    }
+
+    @include mq(350px) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &__article:not(:last-child) {
+    padding-bottom: 64px;
+  }
+
+  &__heading {
+    font-size: 1.8em;
+    color: #041230;
   }
 
   &__feature-box {
-    padding: 1.5rem;
+    padding: 20px 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    font-size: 45px;
     box-shadow: $boxShadow;
+    transition: $transition;
+
+    &:hover {
+      transform: translateY(-5px);
+    }
 
     @include mq($md) {
       padding: 1rem;
     }
   }
 
-  &__icon-container {
-    @include flex(space-around);
-  }
-
-  &__heading {
-    margin: 1rem 0;
-    font-size: 1.25rem;
+  &__lang {
+    margin: 18px 0 0;
+    font-size: 22px;
     text-align: center;
-  }
 
-  &__underscore {
-    width: 20%;
-    margin: 0 auto;
-    background-color: $secondaryColor;
-  }
-
-  &__description {
-    font-family: $secondaryFont;
-    color: #6c757d;
-    line-height: 1.4rem;
-    font-size: 1.1rem;
-    text-align: center;
+    @include mq($sm) {
+      font-size: 18px;
+    }
   }
 }
