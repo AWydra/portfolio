@@ -10,6 +10,11 @@
     @extend %bg-overlay;
   }
 
+  @include mq($sm) {
+    height: calc(100vh - 55px);
+    background-attachment: unset;
+  }
+
   &__container {
     z-index: 1;
     @include flex(center, center, column);
@@ -63,9 +68,33 @@
     border: none;
     font-size: 2em;
     cursor: pointer;
+    animation: bounce 2s infinite;
 
+    &:hover,
     &:focus {
       outline: none;
+      .icon {
+        fill: $secondaryColor;
+      }
     }
+
+    .icon {
+      transition: $transition;
+    }
+  }
+}
+
+@keyframes bounce {
+  0% {
+    transform: translateY(0);
+  }
+  30% {
+    transform: translateY(-25%);
+  }
+  50% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(0);
   }
 }

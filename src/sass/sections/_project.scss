@@ -161,11 +161,13 @@
   gap: 1em;
 
   @include mq($sm) {
+    margin-top: 1em;
     grid-template-columns: 1fr;
   }
 
   &__figure {
     margin: 0;
+    box-shadow: $boxShadow;
   }
 
   &__href {

@@ -15,13 +15,13 @@
       >
     </p>
   </section>
-  <button class="intro__arrow">
+  <a href="#about" class="intro__arrow">
     <svg class="icon">
       <use
         xlink:href="//<?= $_SERVER['SERVER_NAME'] ?>/img/svg/icons.svg#icon-arrows"
       ></use>
     </svg>
-  </button>
+  </a>
 </header>
 <main class="page">
   <section id="about" class="about page__section">
@@ -60,7 +60,11 @@
         <ul class="about__info">
           <li class="about__info-item">
             <span class="about__info-key">wiek:</span>
-            <p class="about__info-value">18 Lat</p>
+            <p class="about__info-value">
+              <?php
+                echo floor((time() - strtotime("2000-08-16")) / 31556926);
+              ?> 
+              Lat</p>
           </li>
           <li class="about__info-item">
             <span class="about__info-key">miasto:</span>
@@ -191,14 +195,6 @@
         <div class="skills__feature-box">
           <svg class="icon icon--skills">
             <use
-              xlink:href="//<?= $_SERVER['SERVER_NAME'] ?>/img/svg/icons.svg#icon-nodejs"
-            ></use>
-          </svg>
-          <h4 class="skills__lang">Node.js + Express</h4>
-        </div>
-        <div class="skills__feature-box">
-          <svg class="icon icon--skills">
-            <use
               xlink:href="//<?= $_SERVER['SERVER_NAME'] ?>/img/svg/icons.svg#icon-php"
             ></use>
           </svg>
@@ -211,6 +207,14 @@
             ></use>
           </svg>
           <h4 class="skills__lang">MySQL</h4>
+        </div>
+        <div class="skills__feature-box">
+          <svg class="icon icon--skills">
+            <use
+              xlink:href="//<?= $_SERVER['SERVER_NAME'] ?>/img/svg/icons.svg#icon-nodejs"
+            ></use>
+          </svg>
+          <h4 class="skills__lang">Node.js + Express</h4>
         </div>
       </div>
     </article>
