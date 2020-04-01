@@ -1,4 +1,4 @@
-//=include plugins/baguetteBox.js
+//=include plugins\baguetteBox.js
 
 document.addEventListener("DOMContentLoaded", () => {
   baguetteBox.run(".gallery");

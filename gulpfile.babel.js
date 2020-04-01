@@ -26,7 +26,7 @@ const config = {
         "./src/sass/project.scss",
         "./src/sass/error404.scss"
       ],
-      js: ["./src/js/home.js", "./src/js/project.js"]
+      js: ["./src/js/home.js", "./src/js/project.js", "./src/js/global.js"]
     },
     dist: {
       main: "./dist",

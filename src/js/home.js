@@ -1,2 +1,2 @@
-//=include plugins/tiny-slider.js
-//=include slider.conf.js
+//=include plugins\tiny-slider.js
+//=include resources\slider.conf.js
