@@ -470,21 +470,18 @@
     <section class="contact__container">
       <div class="contact__info">
         <article class="contact__info-item">
-          <svg class="icon icon--theme icon--contact">
+          <svg class="icon icon--theme icon--contact icon--whatsapp">
             <use
-              xlink:href="//<?= $_SERVER['SERVER_NAME'] ?>/img/svg/icons.svg#icon-cell-phone"
+              xlink:href="//<?= $_SERVER['SERVER_NAME'] ?>/img/svg/icons.svg#icon-whatsapp"
             ></use>
           </svg>
-          <h6 class="contact__info-heading">Telefon</h6>
+          <h6 class="contact__info-heading">WhatsApp</h6>
           <a
             href="#"
             class="contact__info-anchor"
-            data-keep-safe="062 063 566 84+"
-          ></a>
-          <a
-            href="#"
-            class="contact__info-anchor"
-            data-keep-safe="ARDYW 9375 84+"
+            data-keep-safe="273999375"
+            data-label="ARDYW 9375 84+"
+            data-type="whatsapp"
           ></a>
         </article>
         <article class="contact__info-item">
@@ -497,7 +494,8 @@
           <a
             href="#"
             class="contact__info-anchor"
-            data-keep-safe="lp.ardywa@olleh"
+            data-keep-safe="aGVsbG9AYXd5ZHJhLnBs"
+            data-type="email"
           >
           </a>
         </article>

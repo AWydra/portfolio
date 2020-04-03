@@ -24,8 +24,18 @@ hr {
     height: $iconContact;
   }
 
+  &--whatsapp {
+    width: 32px;
+    height: 34px;
+    top: 18px;
+    left: 14px;
+    stroke: $secondaryColor;
+    stroke-width: 0.5px;
+  }
+
   &--users {
-    width: 35px;
+    width: 32px;
+    left: 14px;
     stroke: $secondaryColor;
     stroke-width: 2px;
   }
@@ -76,6 +86,10 @@ hr {
 
     @include mq($lg) {
       padding: 50px 5%;
+
+      &:first-child {
+        padding-top: 75px;
+      }
     }
   }
 }
@@ -156,7 +170,7 @@ hr {
 .btn {
   height: 46px;
   display: inline-block;
-  margin: 5px;
+  margin: 5px 0;
   padding: 0 26px;
   cursor: pointer;
   white-space: nowrap;
