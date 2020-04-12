@@ -125,8 +125,11 @@ hr {
 
   &__content {
     margin: 0;
-    font-size: $sectionTitle;
-    text-transform: uppercase;
+    font-size: 3em;
+
+    #{$parent}--project & {
+      font-size: $sectionTitle;
+    }
   }
 
   &__subtitle {
