@@ -236,21 +236,6 @@
         </div>
       </div>
     </article>
-    <!-- <div class="skills__feature-box">
-        <svg class="icon icon--skills">
-          <use
-            xlink:href="//<?= $_SERVER['SERVER_NAME'] ?>/img/svg/icons.svg#icon-graphql"
-          ></use>
-        </svg>
-        <h3 class="skills__lang">GraphQL</h3>
-      </div>
-    <div class="skills__feature-box">
-      <svg class="icon icon--skills">
-        <use xlink:href="//<?= $_SERVER['SERVER_NAME'] ?>/img/svg/icons.svg#icon-mongodb"></use>
-      </svg>
-      <h4 class="skills__lang">MongoDB</h4>
-    </div>
-    -->
   </section>
   <section id="portfolio" class="portfolio page__section">
     <header class="title">
@@ -262,71 +247,22 @@
       </div>
     </header>
     <section class="portfolio__container">
+      <?php foreach($data as $item): ?>
       <article class="portfolio__feature-box">
-        <a class="portfolio__link" href="#">
+        <a class="portfolio__link" href="<?= $item['slug'] ?>/">
           <figure class="portfolio__figure">
             <div class="portfolio__img-container">
-              <img class="portfolio__img" src="https://dummyimage.com/400x230/9e9e9e/fff" alt="Project 1" />
+              <img class="portfolio__img" src="img/project/<?= $item['slug'] ?>/1.min.jpg"
+                alt="<?= $item['heading'] ?>" />
             </div>
             <figcaption class="portfolio__figcap">
-              <h2 class="portfolio__title">Lorem ipsum</h2>
+              <h2 class="portfolio__title"><?= $item['heading'] ?></h2>
               <hr class="portfolio__underscore" />
             </figcaption>
           </figure>
         </a>
       </article>
-      <article class="portfolio__feature-box">
-        <a class="portfolio__link" href="#">
-          <figure class="portfolio__figure">
-            <div class="portfolio__img-container">
-              <img class="portfolio__img" src="https://dummyimage.com/400x230/9e9e9e/fff" alt="Project 1" />
-            </div>
-            <figcaption class="portfolio__figcap">
-              <h2 class="portfolio__title">Lorem ipsum</h2>
-              <hr class="portfolio__underscore" />
-            </figcaption>
-          </figure>
-        </a>
-      </article>
-      <article class="portfolio__feature-box">
-        <a class="portfolio__link" href="#">
-          <figure class="portfolio__figure">
-            <div class="portfolio__img-container">
-              <img class="portfolio__img" src="https://dummyimage.com/400x230/9e9e9e/fff" alt="Project 1" />
-            </div>
-            <figcaption class="portfolio__figcap">
-              <h2 class="portfolio__title">Lorem ipsum</h2>
-              <hr class="portfolio__underscore" />
-            </figcaption>
-          </figure>
-        </a>
-      </article>
-      <article class="portfolio__feature-box">
-        <a class="portfolio__link" href="#">
-          <figure class="portfolio__figure">
-            <div class="portfolio__img-container">
-              <img class="portfolio__img" src="https://dummyimage.com/400x230/9e9e9e/fff" alt="Project 1" />
-            </div>
-            <figcaption class="portfolio__figcap">
-              <h2 class="portfolio__title">Lorem ipsum</h2>
-              <hr class="portfolio__underscore" />
-            </figcaption>
-          </figure>
-        </a>
-      </article>
-      <article class="portfolio__feature-box">
-        <a class="portfolio__link" href="#">
-          <figure class="portfolio__figure">
-            <div class="portfolio__img-container">
-              <img class="portfolio__img" src="https://dummyimage.com/400x230/9e9e9e/fff" alt="Project 1" />
-            </div>
-            <figcaption class="portfolio__figcap">
-              <h2 class="portfolio__title">Lorem ipsum</h2>
-              <hr class="portfolio__underscore" />
-            </figcaption>
-          </figure>
-        </a>
-      </article>
+      <?php endforeach ?>
     </section>
   </section>
   <section id="testimonials" class="testimonials page__section">

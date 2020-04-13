@@ -29,6 +29,8 @@ if ($illegal) { //If slug is incorrect
   $page = 'home.php';
   $file = 'home';
 
+  $data = $pdo->query("SELECT heading, slug FROM portfolio")->fetchAll();
+
   include 'layout.php';
   exit;
 }
