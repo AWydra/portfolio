@@ -252,7 +252,7 @@
         <a class="portfolio__link" href="<?= $item['slug'] ?>/">
           <figure class="portfolio__figure">
             <div class="portfolio__img-container">
-              <img class="portfolio__img" src="img/project/<?= $item['slug'] ?>/1.min.jpg"
+              <img class="portfolio__img" src="img/project/<?= $item['slug'] ?>/1.min.png"
                 alt="<?= $item['heading'] ?>" />
             </div>
             <figcaption class="portfolio__figcap">

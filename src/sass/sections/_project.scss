@@ -181,11 +181,22 @@
   &__figure {
     margin: 0;
     box-shadow: $boxShadow;
+    border: solid #ddd 2px;
+
+    &:only-child {
+      grid-column: 1 / span 2;
+      width: 60%;
+      margin: 0 auto;
+
+      @include mq($sm) {
+        width: 100%;
+      }
+    }
   }
 
   &__href {
     overflow: hidden;
-    @include aspect-ratio("gallery__image", 15, 10);
+    @include aspect-ratio("gallery__image", 16, 9);
   }
 
   &__image {

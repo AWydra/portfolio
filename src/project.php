@@ -34,9 +34,9 @@
             for ($i = 1; $i <= $images; $i++):
           ?>
           <figure class="gallery__figure">
-            <a class="gallery__href" href="//<?= $_SERVER["SERVER_NAME"] ?>/img/project/<?= $slug ?>/<?= $i ?>.jpg">
+            <a class="gallery__href" href="//<?= $_SERVER["SERVER_NAME"] ?>/img/project/<?= $slug ?>/<?= $i ?>.png">
               <img class="gallery__image"
-                src="//<?= $_SERVER["SERVER_NAME"] ?>/img/project/<?= $slug ?>/<?=$i?>.min.jpg"
+                src="//<?= $_SERVER["SERVER_NAME"] ?>/img/project/<?= $slug ?>/<?=$i?>.min.png"
                 alt="Gallery item <?= $i ?>" />
             </a>
           </figure>

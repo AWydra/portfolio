@@ -51,8 +51,6 @@ if(!$data) {
 $heading = $data['heading'];
 $details = unserialize($data['details']);
 $desc = $data['description'];
-$code = $data['code'];
-$live = $data['live'];
 $technologies = unserialize($data['technologies']);
 
 $page = 'project.php';
