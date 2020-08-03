@@ -353,17 +353,20 @@
         <form action="mail.php" class="contact__form">
           <div class="contact__inputs">
             <div class="contact__input-container">
-              <input class="contact__input" type="text" name="name" placeholder="Imię" />
+              <input class="contact__input" id="name" type="text" name="name" placeholder="Imię" />
               <div class="contact__underscore"></div>
+              <div class="contact__error"></div>
             </div>
             <div class="contact__input-container">
-              <input class="contact__input" type="email" name="email" placeholder="Email" />
+              <input class="contact__input" id="email" type="email" name="email" placeholder="Email" />
               <div class="contact__underscore"></div>
+              <div class="contact__error"></div>
             </div>
           </div>
           <div class="contact__textarea-container">
-            <textarea class="contact__textarea" name="message" placeholder="Treść wiadomości"></textarea>
+            <textarea class="contact__textarea" id="message" name="message" placeholder="Treść wiadomości"></textarea>
             <div class="contact__underscore"></div>
+            <div class="contact__error"></div>
           </div>
           <button class="btn btn--theme btn--medium" type="submit" name="send">
             Wyślij wiadomość
