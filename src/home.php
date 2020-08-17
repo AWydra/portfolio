@@ -350,7 +350,7 @@
       </div>
       <article class="contact__form-container">
         <h4 class="contact__heading">Przywitaj się :)</h4>
-        <form action="mail.php" class="contact__form">
+        <form action="mail.php" id="form" class="contact__form">
           <div class="contact__inputs">
             <div class="contact__input-container">
               <input class="contact__input" id="name" type="text" name="name" placeholder="Imię" />

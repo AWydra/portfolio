@@ -21,6 +21,7 @@ class Form {
       errorField.textContent = "Możesz używać tylko liter i cyfr";
     } else {
       errorField.textContent = "";
+      return true;
     }
   }
 
@@ -35,6 +36,7 @@ class Form {
       errorField.textContent = "Wprowadź poprawny adres email";
     } else {
       errorField.textContent = "";
+      return true;
     }
   }
 
@@ -50,10 +52,34 @@ class Form {
       errorField.textContent = "Maksymalnie 5000 znaków";
     } else {
       errorField.textContent = "";
+      return true;
+    }
+  }
+
+  handleSubmit(ev) {
+    ev.preventDefault();
+
+    const isValid = [
+      this.validateName(),
+      this.validateEmail(),
+      this.validateMessage(),
+    ].every((el) => el === true);
+
+    if (isValid) {
+      const data = new FormData(this.form);
+
+      fetch("/mail.php", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: data,
+      }).then(() => this.form.reset());
     }
   }
 
   init() {
+    this.form.addEventListener("submit", (ev) => this.handleSubmit(ev));
     this.name.addEventListener("input", () => this.validateName());
     this.email.addEventListener("input", () => this.validateEmail());
     this.message.addEventListener("input", () => this.validateMessage());
