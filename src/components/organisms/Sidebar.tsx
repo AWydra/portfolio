@@ -1,5 +1,5 @@
 import { LogoIcon } from "@/icons/Logo";
-import { SidebarItem } from "./SidebarItem";
+import { SidebarItem } from "../molecules/SidebarItem";
 
 export const Sidebar = () => (
   <aside className="fixed flex h-full w-80 flex-col items-start bg-primary pb-8 pt-11">

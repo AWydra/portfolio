@@ -1,4 +1,4 @@
-import { Sidebar } from "@/components/Sidebar";
+import { Sidebar } from "@/components/organisms/Sidebar";
 import type { Metadata } from "next";
 import { Montserrat } from "next/font/google";
 import "./globals.css";
@@ -25,7 +25,7 @@ export default function RootLayout({
       <body className={montserrat.className}>
         <div className="flex">
           <Sidebar />
-          <div className="w-[100vw] flex-1 pl-80">{children}</div>
+          <div className="w-[100vw] flex-1 bg-page pl-80">{children}</div>
         </div>
       </body>
     </html>
