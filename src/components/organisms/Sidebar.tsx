@@ -1,21 +1,15 @@
 import { LogoIcon } from "@/icons/Logo";
-import { SidebarItem } from "../molecules/SidebarItem";
+import { SidebarItem } from "../atoms/SidebarItem";
 
 export const Sidebar = () => (
-  <aside className="fixed flex h-full w-80 flex-col items-start bg-primary pb-8 pt-11">
-    <div className="flex w-full flex-col items-center">
-      <LogoIcon className="h-36 w-40 fill-secondary" />
-      <p className="text-center text-2xl font-bold uppercase tracking-wide text-white">
-        Arkadiusz <span className="text-secondary">Wydra</span>
-      </p>
-    </div>
-    <nav className="mt-16 pl-7">
-      <ul className="flex flex-col gap-4">
-        <SidebarItem href="#">Start</SidebarItem>
-        <SidebarItem href="#about">O mnie</SidebarItem>
-        <SidebarItem href="#skills">Umiejętności</SidebarItem>
-        <SidebarItem href="#contact">Kontakt</SidebarItem>
-      </ul>
+  <header className="fixed left-0 top-0 flex h-full w-32 flex-col items-center border-b border-b-gray-800 bg-page py-12">
+    <LogoIcon className="h-8 w-16 fill-secondary md:h-11" />
+    <nav className="mt-10 flex text-typography">
+      <div className="relative flex rotate-180 flex-row-reverse gap-6 [writing-mode:vertical-lr]">
+        <SidebarItem>About</SidebarItem>
+        <SidebarItem>Skills</SidebarItem>
+        <SidebarItem>Contact</SidebarItem>
+      </div>
     </nav>
-  </aside>
+  </header>
 );
