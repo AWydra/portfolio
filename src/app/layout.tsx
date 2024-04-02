@@ -1,13 +1,12 @@
-import { Sidebar } from "@/components/organisms/Sidebar";
 import type { Metadata } from "next";
-import { Montserrat } from "next/font/google";
+import { Inter } from "next/font/google";
 import "./globals.css";
+import { Sidebar } from "@/components/organisms/Sidebar";
 
-const montserrat = Montserrat({
-  weight: ["400", "600", "700"],
+const inter = Inter({
+  weight: ["400", "500", "600", "700"],
   style: ["normal"],
   subsets: ["latin"],
-  display: "swap",
 });
 
 export const metadata: Metadata = {
@@ -22,10 +21,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={montserrat.className}>
-        <div className="flex">
+      <body className={`bg-page ${inter.className}`}>
+        <div className="pl-32">
           <Sidebar />
-          <div className="w-[100vw] flex-1 bg-page pl-80">{children}</div>
+          <div className="px-[4vw] pt-[15vh] md:pt-[22vh] lg:px-[7vw]">
+            {children}
+          </div>
         </div>
       </body>
     </html>
