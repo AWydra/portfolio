@@ -8,9 +8,9 @@ import { LogoIcon } from "@/icons/Logo";
 
 export const Hero = () => {
   return (
-    <section className="relative flex h-[100vh] w-full flex-col pt-[15vh] md:pt-[22vh]">
-      <LogoIcon className="absolute bottom-14 left-[20vw] h-[90vh] w-auto fill-white opacity-15" />
-      <div className="flex w-fit flex-col items-start">
+    <section className="relative flex h-[100svh] min-h-[500px] w-full flex-col pt-[10vh] md:pt-[22vh]">
+      <LogoIcon className="absolute bottom-14 left-[40vw] h-[20vh] w-auto fill-white opacity-15 md:left-[20vw] md:h-[90vh]" />
+      <div className="z-10 flex w-fit flex-col items-start">
         <div className="relative before:absolute before:-bottom-[13px] before:-left-[28px] before:h-[110%] before:w-3 before:bg-secondary">
           <p className="text-display2 font-semibold text-secondary">
             Hey there, I&apos;m

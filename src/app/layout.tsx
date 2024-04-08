@@ -22,11 +22,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`bg-page ${inter.className}`}>
-        <div className="pl-32">
+        <div className="overflow-x-hidden md:pl-32">
           <Sidebar />
-          <div className="px-[4vw] pt-[15vh] md:pt-[22vh] lg:px-[7vw]">
-            {children}
-          </div>
+          <div className="px-[4vw] lg:px-[7vw]">{children}</div>
         </div>
       </body>
     </html>
