@@ -8,8 +8,8 @@ import { LogoIcon } from "@/icons/Logo";
 
 export const Hero = () => {
   return (
-    <section className="relative flex h-[100svh] min-h-[500px] w-full flex-col pt-[10vh] md:pt-[22vh]">
-      <LogoIcon className="absolute bottom-14 left-[40vw] h-[20vh] w-auto fill-white opacity-15 md:left-[20vw] md:h-[90vh]" />
+    <section className="relative flex h-[100svh] min-h-[500px] w-full flex-col px-9 pt-[10vh] sm:px-[4vw] md:pt-[22vh] lg:px-[7vw]">
+      <LogoIcon className="absolute bottom-14 right-0 h-[20vh] w-auto translate-x-[30%] fill-white opacity-15 md:left-[20vw] md:h-[90vh] md:translate-x-0" />
       <div className="z-10 flex w-fit flex-col items-start">
         <div className="relative before:absolute before:-bottom-[13px] before:-left-[28px] before:h-[110%] before:w-3 before:bg-secondary">
           <p className="text-display2 font-semibold text-secondary">
@@ -24,10 +24,21 @@ export const Hero = () => {
           developer with an interest in Computer Science.
         </p>
         <ul className="mt-8 grid grid-cols-2 gap-6 md:flex">
-          <KeyTechnology icon={ReactIcon}>React</KeyTechnology>
-          <KeyTechnology icon={NextjsIcon}>Next.js</KeyTechnology>
-          <KeyTechnology icon={NodejsIcon}>Node.js</KeyTechnology>
-          <KeyTechnology icon={TizenIcon}>Samsung TV</KeyTechnology>
+          <KeyTechnology
+            className="[&_circle]:fill-gray-400 [&_g]:stroke-gray-400"
+            icon={ReactIcon}
+          >
+            React
+          </KeyTechnology>
+          <KeyTechnology className="[&_path]:fill-gray-400" icon={NextjsIcon}>
+            Next.js
+          </KeyTechnology>
+          <KeyTechnology className="[&_path]:fill-gray-400" icon={NodejsIcon}>
+            Node.js
+          </KeyTechnology>
+          <KeyTechnology className="[&_path]:fill-gray-400" icon={TizenIcon}>
+            Samsung TV
+          </KeyTechnology>
         </ul>
       </div>
     </section>
