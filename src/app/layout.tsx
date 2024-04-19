@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import { Sidebar } from "@/components/organisms/Sidebar";
+import { Footer } from "@/components/organisms/Footer";
 
 const inter = Inter({
   weight: ["400", "500", "600", "700"],
@@ -24,7 +25,8 @@ export default function RootLayout({
       <body className={`bg-page ${inter.className}`}>
         <div className="overflow-x-hidden md:pl-32">
           <Sidebar />
-          <div className="px-[4vw] lg:px-[7vw]">{children}</div>
+          <main>{children}</main>
+          <Footer />
         </div>
       </body>
     </html>
