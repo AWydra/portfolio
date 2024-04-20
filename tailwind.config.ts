@@ -11,6 +11,13 @@ const fluidTypography = (minFont: number, maxFont: number) => {
 const config: Config = {
   content: ["./src/**/*.{js,ts,jsx,tsx,mdx}"],
   theme: {
+    screens: {
+      sm: "640px",
+      md: "800px",
+      lg: "1024px",
+      xl: "1280px",
+      "2xl": "1536px",
+    },
     extend: {
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
@@ -31,17 +38,17 @@ const config: Config = {
     },
   },
   plugins: [
-    plugin(function({ matchUtilities, theme }) {
+    plugin(function ({ matchUtilities, theme }) {
       matchUtilities(
         {
-          'translate-z': (value) => ({
-            '--tw-translate-z': value,
+          "translate-z": (value) => ({
+            "--tw-translate-z": value,
             transform: ` translate3d(var(--tw-translate-x), var(--tw-translate-y), var(--tw-translate-z)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))`,
           }),
         },
-        { values: theme('translate'), supportsNegativeValues: true }
-      )
-    })
+        { values: theme("translate"), supportsNegativeValues: true },
+      );
+    }),
   ],
 };
 export default config;
