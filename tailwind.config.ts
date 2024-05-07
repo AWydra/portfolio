@@ -1,5 +1,8 @@
 import type { Config } from "tailwindcss";
 import plugin from "tailwindcss/plugin";
+const flattenColorPalette =
+  require("tailwindcss/lib/util/flattenColorPalette").default;
+const { parseColor } = require("tailwindcss/lib/util/color");
 
 const fluidTypography = (minFont: number, maxFont: number) => {
   let XX = 768 / 100;
@@ -47,6 +50,35 @@ const config: Config = {
           }),
         },
         { values: theme("translate"), supportsNegativeValues: true },
+      );
+    }),
+    plugin(({ matchUtilities, theme }) => {
+      matchUtilities(
+        {
+          "slide-underline": (value) => {
+            const { color } = parseColor(value);
+
+            const hoverState = `linear-gradient(rgb(${color[0]} ${color[1]} ${color[2]}), rgb(${color[0]} ${color[1]} ${color[2]})) no-repeat 0 100% / 100% 2px,
+            linear-gradient(rgba(${color[0]} ${color[1]} ${color[2]} / 0.3), rgba(${color[0]} ${color[1]} ${color[2]} / 0.3)) no-repeat 0 100% / 100% 2px`;
+
+            return {
+              paddingBottom: "2px",
+              transitionDuration: "0.25s",
+              transitionTimingFunction: "cubic-bezier(0.4, 0, 0.2, 1)",
+              transitionProperty: "background-size",
+              background: `linear-gradient(rgb(${color[0]} ${color[1]} ${color[2]}), rgb(${color[0]} ${color[1]} ${color[2]})) no-repeat 100% 100% / 0 2px,
+                           linear-gradient(rgba(${color[0]} ${color[1]} ${color[2]} / 0.3), rgba(${color[0]} ${color[1]} ${color[2]} / 0.3)) no-repeat 0 100% / 100% 2px`,
+              outline: "none",
+              "&:hover": {
+                background: hoverState,
+              },
+              "&:focus": {
+                background: hoverState,
+              },
+            };
+          },
+        },
+        { values: flattenColorPalette(theme("colors")), type: "color" },
       );
     }),
   ],
