@@ -4,6 +4,9 @@ const flattenColorPalette =
   require("tailwindcss/lib/util/flattenColorPalette").default;
 const { parseColor } = require("tailwindcss/lib/util/color");
 
+const transformBaseString =
+  "translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))";
+
 const fluidTypography = (minFont: number, maxFont: number) => {
   let XX = 768 / 100;
   let YY = (100 * (maxFont - minFont)) / (1920 - 768);
@@ -46,7 +49,7 @@ const config: Config = {
         {
           "translate-z": (value) => ({
             "--tw-translate-z": value,
-            transform: ` translate3d(var(--tw-translate-x), var(--tw-translate-y), var(--tw-translate-z)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))`,
+            transform: `translate3d(var(--tw-translate-x), var(--tw-translate-y), var(--tw-translate-z)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))`,
           }),
         },
         { values: theme("translate"), supportsNegativeValues: true },
@@ -58,9 +61,6 @@ const config: Config = {
           "slide-underline": (value) => {
             const { color } = parseColor(value);
 
-            const hoverState = `linear-gradient(rgb(${color[0]} ${color[1]} ${color[2]}), rgb(${color[0]} ${color[1]} ${color[2]})) no-repeat 0 100% / 100% 2px,
-            linear-gradient(rgba(${color[0]} ${color[1]} ${color[2]} / 0.3), rgba(${color[0]} ${color[1]} ${color[2]} / 0.3)) no-repeat 0 100% / 100% 2px`;
-
             return {
               paddingBottom: "2px",
               transitionDuration: "0.25s",
@@ -69,11 +69,70 @@ const config: Config = {
               background: `linear-gradient(rgb(${color[0]} ${color[1]} ${color[2]}), rgb(${color[0]} ${color[1]} ${color[2]})) no-repeat 100% 100% / 0 2px,
                            linear-gradient(rgba(${color[0]} ${color[1]} ${color[2]} / 0.3), rgba(${color[0]} ${color[1]} ${color[2]} / 0.3)) no-repeat 0 100% / 100% 2px`,
               outline: "none",
-              "&:hover": {
-                background: hoverState,
+              "&:hover, &:focus": {
+                background: `linear-gradient(rgb(${color[0]} ${color[1]} ${color[2]}), rgb(${color[0]} ${color[1]} ${color[2]})) no-repeat 0 100% / 100% 2px,
+                             linear-gradient(rgba(${color[0]} ${color[1]} ${color[2]} / 0.3), rgba(${color[0]} ${color[1]} ${color[2]} / 0.3)) no-repeat 0 100% / 100% 2px`,
               },
-              "&:focus": {
-                background: hoverState,
+            };
+          },
+        },
+        { values: flattenColorPalette(theme("colors")), type: "color" },
+      );
+    }),
+    plugin(({ matchUtilities, theme }) => {
+      matchUtilities(
+        {
+          "slide-strikethrough": (value) => {
+            const { color } = parseColor(value);
+
+            return {
+              "&:after": {
+                content: "var(--tw-content)",
+                position: "absolute",
+                bottom: "0",
+                height: "100%",
+                width: "0.25rem",
+                transformOrigin: "bottom left",
+                "--tw-scale-y": "0",
+                transform: transformBaseString,
+                background: `rgb(${color[0]} ${color[1]} ${color[2]})`,
+                transition: "transform 0.25s cubic-bezier(0.4, 0, 0.2, 1)",
+              },
+              "&:hover:after, &:focus:after": {
+                "--tw-scale-y": "1",
+                transform: transformBaseString,
+                transformOrigin: "top left",
+                outline: "none",
+              },
+            };
+          },
+        },
+        { values: flattenColorPalette(theme("colors")), type: "color" },
+      );
+    }),
+    plugin(({ matchUtilities, theme }) => {
+      matchUtilities(
+        {
+          "slide-bg": (value) => {
+            const { color } = parseColor(value);
+
+            return {
+              position: "relative",
+              "&:after": {
+                content: "var(--tw-content)",
+                position: "absolute",
+                top: "0",
+                right: "0",
+                bottom: "0",
+                left: "0",
+                background: `rgba(${color[0]}, ${color[1]}, ${color[2]}, 0.2)`,
+                transform: "scale3d(0,1,1)",
+                transformOrigin: "right",
+                transition: "transform 0.25s cubic-bezier(0.4, 0, 0.2, 1)",
+              },
+              "&:hover:after, &:focus:after": {
+                transform: "scaleZ(1)",
+                transformOrigin: "left",
               },
             };
           },
