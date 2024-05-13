@@ -69,7 +69,7 @@ const config: Config = {
               background: `linear-gradient(rgb(${color[0]} ${color[1]} ${color[2]}), rgb(${color[0]} ${color[1]} ${color[2]})) no-repeat 100% 100% / 0 2px,
                            linear-gradient(rgba(${color[0]} ${color[1]} ${color[2]} / 0.3), rgba(${color[0]} ${color[1]} ${color[2]} / 0.3)) no-repeat 0 100% / 100% 2px`,
               outline: "none",
-              "&:hover, &:focus": {
+              "&:hover, &:focus-visible": {
                 background: `linear-gradient(rgb(${color[0]} ${color[1]} ${color[2]}), rgb(${color[0]} ${color[1]} ${color[2]})) no-repeat 0 100% / 100% 2px,
                              linear-gradient(rgba(${color[0]} ${color[1]} ${color[2]} / 0.3), rgba(${color[0]} ${color[1]} ${color[2]} / 0.3)) no-repeat 0 100% / 100% 2px`,
               },
@@ -86,6 +86,7 @@ const config: Config = {
             const { color } = parseColor(value);
 
             return {
+              outline: "none",
               "&:after": {
                 content: "var(--tw-content)",
                 position: "absolute",
@@ -98,7 +99,7 @@ const config: Config = {
                 background: `rgb(${color[0]} ${color[1]} ${color[2]})`,
                 transition: "transform 0.25s cubic-bezier(0.4, 0, 0.2, 1)",
               },
-              "&:hover:after, &:focus:after": {
+              "&:hover:after, &:focus-visible:after": {
                 "--tw-scale-y": "1",
                 transform: transformBaseString,
                 transformOrigin: "top left",
@@ -118,6 +119,7 @@ const config: Config = {
 
             return {
               position: "relative",
+              outline: "none",
               "&:after": {
                 content: "var(--tw-content)",
                 position: "absolute",
@@ -130,7 +132,7 @@ const config: Config = {
                 transformOrigin: "right",
                 transition: "transform 0.25s cubic-bezier(0.4, 0, 0.2, 1)",
               },
-              "&:hover:after, &:focus:after": {
+              "&:hover:after, &:focus-visible:after": {
                 transform: "scaleZ(1)",
                 transformOrigin: "left",
               },
