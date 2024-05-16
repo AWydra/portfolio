@@ -8,7 +8,7 @@ interface Props extends React.HTMLAttributes<HTMLElement> {
 export const SectionTitle = ({ className, children, ...props }: Props) => (
   <h2
     className={cn(
-      "flex gap-3 text-[42px] font-bold leading-tight text-white before:block before:h-[1.25em] before:w-2 before:bg-secondary",
+      "relative flex pl-5 text-[42px] font-bold leading-tight text-white before:absolute before:left-0 before:block before:h-[1.25em] before:w-2 before:bg-secondary",
       className,
     )}
     {...props}

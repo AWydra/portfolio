@@ -32,9 +32,13 @@ import { BackstopIcon } from "@/icons/Backstop";
 import { JenkinsIcon } from "@/icons/Jenkins";
 import { AzureIcon } from "@/icons/Azure";
 import { WebOsIcon } from "@/icons/WebOs";
+import { SectionId } from "@/enums/SectionId.enum";
 
 export const Technologies = () => (
-  <section className="w-full max-w-[600px] py-20 lg:max-w-[1100px]">
+  <section
+    className="w-full max-w-[600px] py-20 lg:max-w-[1100px]"
+    id={SectionId.TECHNOLOGIES}
+  >
     <SectionTitle>Technologies</SectionTitle>
     <div className="mt-10 flex flex-col gap-10">
       <TechnologyGroup heading="Frontend">

@@ -1,9 +1,13 @@
 import Image from "next/image";
 import { SectionTitle } from "../atoms/SectionTitle";
+import { SectionId } from "@/enums/SectionId.enum";
 
 export const About = () => {
   return (
-    <section className="min-h-[100vh] max-w-[1100px]">
+    <section
+      className="min-h-[100vh] max-w-[1100px] pt-20"
+      id={SectionId.ABOUT}
+    >
       <SectionTitle>About me</SectionTitle>
       <div className="mt-8 grid max-w-[600px] gap-12 pb-8 text-typography lg:max-w-none lg:grid-cols-2">
         <div className="text-xl leading-8">

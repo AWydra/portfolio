@@ -5,10 +5,14 @@ import { NodejsIcon } from "@/icons/Nodejs";
 import { TizenIcon } from "@/icons/Tizen";
 import { ReactIcon } from "@/icons/React";
 import { LogoIcon } from "@/icons/Logo";
+import { SectionId } from "@/enums/SectionId.enum";
 
 export const Hero = () => {
   return (
-    <section className="relative flex h-[100svh] min-h-[500px] w-full flex-col px-9 pt-[10vh] sm:px-[4vw] md:pt-[22vh] lg:px-[7vw]">
+    <section
+      className="relative flex h-[100svh] min-h-[500px] w-full flex-col px-9 pt-[10vh] sm:px-[4vw] md:pt-[22vh] lg:px-[7vw]"
+      id={SectionId.HERO}
+    >
       <LogoIcon className="absolute bottom-14 right-0 h-[20vh] w-auto translate-x-[30%] fill-white opacity-15 md:left-[20vw] md:h-[90vh] md:translate-x-0" />
       <div className="z-10 flex w-fit flex-col items-start">
         <div className="relative before:absolute before:-bottom-[13px] before:-left-[28px] before:h-[110%] before:w-3 before:bg-secondary">
